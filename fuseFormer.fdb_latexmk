@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex fuseFormer"] 1693179696 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1693179728
+["bibtex fuseFormer"] 1693180548 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1693180585
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "fuseFormer.aux" 1693179727 6970 90ad86bc1f3f0f6592ab0ed00456c65b "pdflatex"
+  "fuseFormer.aux" 1693180585 6987 1d93d3a68215db26d8ea3db858d33fae "pdflatex"
   "thesis.bib" 1693178978 34395 d7b451bd7b3e81adcfb49e445b26e203 ""
   (generated)
   "fuseFormer.bbl"
   "fuseFormer.blg"
-["pdflatex"] 1693179727 "/home/ae/repo/01-paper/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1693179728
+["pdflatex"] 1693180584 "/home/ae/repo/01-paper/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1693180585
   "../01metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf" 1692227901 473106 c8c99fda9e47dc2939f5d6a9e2f01ef7 ""
   "../01metu-msc-thesis/images/ch3/20230815all.drawio.pdf" 1692197648 23331 c998f4dc6b879a1589f0426568dfb36b ""
   "../01metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf" 1692225097 162194 49ec4beffbfa083c35bea350daa53563 ""
@@ -97,9 +97,9 @@
   "IEEEtran.cls" 1693163550 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
   "chapters/chapter1.tex" 1693177790 5855 6c1a1aa2e9d35a6c9c5368b1a823b312 ""
   "chapters/chapter2.tex" 1693178853 7043 d06a8274003fd7e292bed8d3b2c62b06 ""
-  "chapters/chapter3.tex" 1693179727 39553 f6bb899083f4ef45c3d16dac6ce99931 ""
-  "fuseFormer.aux" 1693179727 6970 90ad86bc1f3f0f6592ab0ed00456c65b "pdflatex"
-  "fuseFormer.bbl" 1693179696 7401 6ced45d78c15cd452b739ce7459a81da "bibtex fuseFormer"
+  "chapters/chapter3.tex" 1693180584 38232 e39dcd693490d742515df995ed09202b ""
+  "fuseFormer.aux" 1693180585 6987 1d93d3a68215db26d8ea3db858d33fae "pdflatex"
+  "fuseFormer.bbl" 1693180548 7401 6ced45d78c15cd452b739ce7459a81da "bibtex fuseFormer"
   "fuseFormer.tex" 1693179236 3318 fbbac4e8bb783abd174e5456d41716ce ""
   (generated)
   "fuseFormer.aux"

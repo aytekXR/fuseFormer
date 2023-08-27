@@ -3,30 +3,19 @@
 In this chapter, we delve into the realm of infrared and visual band image fusion using transformers, offering a detailed account of our experimental setup and the rationale for our model selection that marries autoencoders with fusion transformers. The robustness of our research is grounded in the carefully curated datasets described in Section \ref{subsec:dataset}, which encompass diverse real-world scenarios and are tailored for compatibility with our fusion model. The infrastructure supporting our research, detailed in Section \ref{subsec:platform}, boasts state-of-the-art GPUs, enhancing our model's training and inference speeds. Our image fusion model's foundation, the autoencoder, is explored in Section \ref{subsec:aesel}, highlighting its capability to distill crucial features from both image bands, subsequently processed by our fusion transformer—a novel yet unclaimed pioneering approach in the field—described in Section \ref{subsec:fusion}. Our commitment to refining image fusion is further emphasized by our tailored loss functions, delineated in Sections \ref{subsec:aeloss} and \ref{subsec:fusionloss}, which play pivotal roles in our model's training to achieve superior fusion results. Through this exploration, we aspire to advance the horizons of multi-modal image processing, heralding advancements in areas like remote sensing and surveillance.
 \subsection{Model Selection} \label{sec:model}
 
-Image fusion, as discussed in Section \ref{sec:traditional}, is a complex problem that can be broken down into three distinct components: the feature extractor, feature fuser, and image reconstructor. The first part of the solution, the feature extractor, plays a crucial role in obtaining multilevel features from the input images. These extracted features are then passed on to the feature fuser, which constitutes the second part of the model. Here, the feature fuser's primary task is to identify complementary features from the previously obtained multilevel features and fuse them into a single set of feature maps for each level. These fused multilevel features serve as the foundation for reconstructing the final fused image, handled by the image reconstructor, which is the third and final part of the model.
-
-Upon closer examination, it becomes evident that the feature extractor bears a resemblance to the encoder part of autoencoders, as discussed in Section \ref{sec:AE}. On the other hand, the image reconstructor can be likened to the decoder part of autoencoders. This analogy helps to conceptualize the flow of information within the model, and it emphasizes the importance of effectively extracting and fusing features to achieve a successful image fusion.
-
-To implement the feature fuser, the model leverages a combination of Convolutional Neural Networks (CNNs) and transformers, as indicated in Section \ref{sec:CNN} and Section \ref{sec:Transformer}, respectively. CNNs are well-suited for local feature matching and combination, whereas transformers excel at handling global contextual information. By integrating these two components, the model aims to strike a balance between capturing intricate local details and grasping broader contextual relationships. This fusion of methodologies holds the potential to enhance the model's performance and produce more accurate image fusions.
+Image fusion can be segmented into three components: the feature extractor, feature fuser, and image reconstructor. The feature extractor derives multilevel features from input images, which the feature fuser then amalgamates into unified feature maps for each level. These consolidated features facilitate the final image reconstruction by the image reconstructor. Drawing parallels, the feature extractor aligns with the encoder of autoencoders (Section \ref{sec:AE}), and the image reconstructor mirrors autoencoders' decoder. The feature fuser harnesses both Convolutional Neural Networks (CNNs) from Section \ref{sec:CNN} and transformers from Section \ref{sec:Transformer}. CNNs adeptly handle local features, while transformers manage global contexts, thus marrying them enriches the fusion process, aiming for enhanced accuracy.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../01metu-msc-thesis/images/ch3/20230815all.drawio.pdf}
+    \caption{High-Level Design of Model}
+    \label{fig:ch3:highlevel}
+\end{figure}
 
 \begin{figure}[htbp]
     \centering
-    % \vspace{0.01cm}
-    \begin{subfigure}[b]{\textwidth}
-        % \centering
-        \includegraphics[width=0.4\textwidth]{../01metu-msc-thesis/images/ch3/20230815all.drawio.pdf}
-        \caption{Detailed Design of Model}
-        \label{fig:ch3:highlevel}
-    \end{subfigure}
-    \vspace{0.01cm}
-    \begin{subfigure}[b]{\textwidth}
-        % \centering
-        \includegraphics[width=0.4\textwidth]{../01metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf}
-        \caption{High-Level Algorithmic Detailed Design of Model}
-        \label{fig:ch3:highlevel2}
-    \end{subfigure}
-    \caption{Design of Overall Model}
-    \label{fig:ch3:rfnnest}
+    \includegraphics[width=0.9\textwidth]{../01metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf}
+    \caption{Detailed Design of Model}
+    \label{fig:ch3:highlevel2}
 \end{figure}
 
 Given the problem's complexity and the proposed model configuration, it is essential to conduct in-depth analyses of each aspect. Therefore, the subsequent sections, from \ref{subsec:aesel} to \ref{subsec:fusionloss}, delve into a comprehensive exploration of the model's inner workings, the datasets employed during experimentation, and the design of the loss function used to train the model. This deeper understanding will shed light on the model's capabilities and limitations, providing a solid foundation for testing and evaluating the proposed hypothesis.
@@ -38,6 +27,7 @@ Training autoencoders presents a set of challenges that require careful consider
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{../01metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf}
+    \centering
     \caption{Autoencoder High-Level Design}
     \label{fig:ch3:encoderhighlevel}
 \end{figure}
