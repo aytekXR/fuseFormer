@@ -1,0 +1,284 @@
+\chapter{Hypothesis Testing Design}
+
+In this chapter, we will design comprehensive experiments to probe the proposed hypotheses detailed in Section \ref{sec:researchquestions}. Some of the hypotheses have already found compelling answers in the existing research literature, as reviewed in Section \ref{chp:RelatedWork}. For those hypotheses yet unaddressed, the model, which was formulated and described in Section \ref{sec:model}, will be employed for rigorous evaluation. The datasets that will be utilized for this evaluation process are referenced in Section \ref{subsec:dataset}. 
+
+With the stated hypotheses, we aim to extend the envelope of existing understanding and contribute novel insights into the domain of image fusion. We expect that the carefully designed experimental procedure will offer a robust platform to scrutinize these hypotheses, shed light on the latent aspects, and help us further refine our model's capability and performance.
+
+The untested or unanswered hypotheses, which still pose intriguing questions and challenges to our research pursuit, can be articulated as follows:
+
+\begin{list}{}{}
+    \item \textbf{Hypothesis 1}: The new loss function, which emphasizes the similarity between both the visible band input and the infrared image input, will result in more informative and meaningful fused images compared to using Structural Similarity Metric (SSIM) as the guiding criterion.
+
+    \item \textbf{Hypothesis 3}: The combination of Transformer-based models and the new loss function will significantly improve night vision enhancement, medical imaging, and surveillance tasks, allowing for better object detection, classification, and tracking in challenging lighting conditions.
+    
+    \item \textbf{Hypothesis 4}: The proposed transformer based approach will achieve a better balance between quantitative and qualitative performance in image fusion, overcoming the compromise between the two that is often observed in traditional deep learning methods.
+    
+    \item \textbf{Hypothesis 5}: The proposed approach will demonstrate computational efficiency, making it suitable for real-time applications, such as video surveillance and live medical imaging, without sacrificing the quality of the fused images.
+    
+    \item \textbf{Hypothesis 6}: The limitations and challenges associated with implementing Transformer-based image fusion techniques can be mitigated through proper model tuning, regularization, and architecture adjustments, leading to improved overall performance.
+    
+    \item \textbf{Hypothesis 2}: The proposed approach will surpass existing state-of-the-art image fusion methods in terms of visual quality, providing more detailed, sharper, and visually appealing fused images.
+    
+\end{list}
+
+Each of these proposed hypotheses will be systematically evaluated in subsequent sections. The hypotheses concerning the significance of transformers and the role of global context will be scrutinized in Section \ref{sec:study1}. On the other hand, the hypotheses associated with the loss function's applicability and effectiveness will be put to rigorous examination in Section \ref{sec:study2}. In essence, we seek to undertake a meticulous exploration of each hypothesis to validate their tenability within the theoretical and empirical constructs of our research. As you may see from the above list \textbf{Hypothesis 10} will be remained for further studies.
+
+\section{Study I: New Loss Function Proposal}\label{sec:study2}
+
+The first part of our research, \textit{Study I}, delves further into the specifics of our model's novel aspects and their impact, particularly focusing on the new loss function and the expanded potential applications of our approach. We anticipate the following outcomes based on these hypotheses:
+
+\begin{itemize}
+    \item \textbf{Hypothesis 1}: The new loss function, which emphasizes the similarity between both the visible band input and the infrared image input, will result in more informative and meaningful fused images compared to using Structural Similarity Metric (SSIM) as the guiding criterion.
+    
+    \item \textbf{Hypothesis 2}: The proposed approach will surpass existing state-of-the-art image fusion methods in terms of visual quality, providing more detailed, sharper, and visually appealing fused images.
+    
+    \item \textbf{Hypothesis 10}: The combination of Transformer-based models and the new loss function will pave the way for innovative applications in image fusion, such as advanced medical diagnostics, autonomous driving, and precision agriculture.
+\end{itemize}
+
+We focus on our new loss function in \textbf{Hypothesis 1}, which plays a pivotal role in our approach. This novel loss function emphasizes the similarity between both the visual and infrared image inputs, which we anticipate will result in fused images that are more informative and meaningful. To validate this, we will compare our fused images with those obtained using other guiding criteria, such as the Structural Similarity Metric (SSIM).
+
+\textbf{Hypothesis 2} asserts that our approach will outperform existing state-of-the-art image fusion techniques in terms of visual quality. This will be assessed through a comparative analysis of our approach and other leading methods. A combination of both objective and subjective evaluations will be used. Objective evaluations will focus on statistical measures of image quality, while subjective evaluations will be based on human visual perception of the fused images' clarity, sharpness, and overall visual appeal.
+
+Through this multi-pronged experimental design, we aim to thoroughly validate our hypotheses, contributing significantly to the growing body of knowledge in transformer-based image fusion techniques. Our results could illuminate new pathways for the application of these models, extending their impact beyond traditional domains.
+
+\subsection{Method To Test Hypothesis 1} \label{subsec:met2}
+
+
+\textbf{Hypothesis 1} proposes that our novel loss function, which emphasizes the similarity between both the visible band input and the infrared image input, will result in more informative and meaningful fused images compared to using the Structural Similarity Metric (SSIM) as the guiding criterion. To validate this hypothesis, we will take the following steps:
+
+\begin{itemize}
+
+    \item \textit{Loss Function Implementation:} Implement the proposed loss function in the model. This loss function will be designed to stress the preservation of significant features from both the visible band and the infrared image inputs.
+
+    \item \textit{Training with Different Loss Functions:} Train multiple versions of the proposed model using different loss functions. One version will utilize the traditional SSIM loss function, and the other will employ the newly proposed loss function. All other parameters and settings will be kept consistent to ensure a fair comparison.
+
+    \item \textit{Visual Evaluation:} Conduct a qualitative evaluation of the fused images produced by both models. This includes assessing the preservation of details from the source images, the contrast, sharpness, and overall perceptual quality of the fused images.
+
+    \item \textit{Quantitative Evaluation:} Quantitatively compare the performance of both models by computing metrics like p$SSIM$, and mutual information for the fused images.
+
+\end{itemize}
+
+By comparing the quality and information retention in the fused images produced using the two different loss functions, we can assess the validity of Hypothesis 1.
+
+\subsection{Method To Test Hypothesis 2} \label{subsec:met9}
+
+\textbf{Hypothesis 2} posits that the proposed approach will surpass existing state-of-the-art image fusion methods in terms of visual quality, providing more detailed, sharper, and visually appealing fused images. To evaluate the validity of this hypothesis, the following steps will be followed:
+
+\begin{itemize}
+    \item \textit{Selection of Benchmark Models:} Choose a set of state-of-the-art image fusion methods as benchmarks. These models should represent the current best performance in image fusion tasks.
+
+    \item \textit{Training and Fusion:} Train the proposed model and each of the benchmark models on the same dataset. Perform image fusion using each of these trained models.
+
+    \item \textit{Visual Comparison:} Conduct a visual comparison of the fused images produced by the proposed model and each of the benchmark models. This qualitative assessment will involve judging the sharpness, clarity, and detail preservation in the fused images.
+
+    \item \textit{Quantitative Comparison:} Use established image quality metrics such as PSNR, SSIM, and mutual information to provide a quantitative comparison of the quality of fused images produced by each model.
+
+\end{itemize}
+
+
+By analyzing the results from the visual, human, and quantitative evaluations, we can infer whether our proposed approach indeed outperforms the current state-of-the-art methods in terms of visual quality of the fused images, thus verifying Hypothesis 2.
+
+\section{Study II: A Unique Transformer Based Fusion Strategy}\label{sec:study1}
+
+Our research aims to explore the application of transformer-based models in the realm of visual and infrared image fusion, with an emphasis on utilizing autoencoders for feature extraction and representation learning. This study is rooted in the following hypotheses:
+
+\begin{itemize}
+    \item \textbf{Hypothesis 3}: The combination of Transformer-based models and the new loss function will significantly improve night vision enhancement, medical imaging, and surveillance tasks, allowing for better object detection, classification, and tracking in challenging lighting conditions.
+    
+    \item \textbf{Hypothesis 4}: The proposed transformer-based approach will achieve a better balance between quantitative and qualitative performance in image fusion, overcoming the compromise between the two that is often observed in traditional deep learning methods.
+    
+    \item \textbf{Hypothesis 5}: The proposed approach will demonstrate computational efficiency, making it suitable for real-time applications, such as video surveillance and live medical imaging, without sacrificing the quality of the fused images.
+    
+    \item \textbf{Hypothesis 6}: The limitations and challenges associated with implementing Transformer-based image fusion techniques can be mitigated through proper model tuning, regularization, and architecture adjustments, leading to improved overall performance.
+\end{itemize}
+
+Our proposed approach builds upon the use of an autoencoder to extract salient features from both visual and infrared images. These feature maps are then fused using a transformer-based approach, incorporating the strengths of both convolutional neural networks and transformer models. The fused features are then reconstructed into a final coherent representation using a single decoder. This architecture has been designed to address the challenges associated with implementing transformer-based image fusion techniques and aims to balance performance and computational efficiency.
+
+We designed experiments to empirically evaluate these hypotheses. The experiments were performed using the TNO dataset, which provides a diverse collection of visual and infrared images, making it ideal for image fusion tasks. Each hypothesis corresponds to a specific aspect of our model's design or objective and guided the development of specific experiments:
+
+For \textbf{Hypothesis 3}, we will evaluate the performance of our model on various tasks such as object detection, classification, and tracking under challenging lighting conditions. We will compare these results with other state-of-the-art models to ascertain the effectiveness of our approach.
+
+In relation to \textbf{Hypothesis 4}, we will assess the qualitative and quantitative performance of our image fusion model. The quantitative analysis will involve measuring metrics such as Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), and Fusion Quality Index (FQI). The qualitative analysis, on the other hand, will involve visual assessments and comparisons with other models.
+
+\textbf{Hypothesis 5} will be evaluated through measuring the computational efficiency of our model in terms of runtime and memory usage during both training and inference. We will also assess the quality of the fused images to ensure that efficiency gains do not come at the expense of fusion quality.
+
+Finally, in testing \textbf{Hypothesis 6}, we will investigate the effects of various model tuning strategies, regularization techniques, and architecture adjustments on the performance of our transformer-based image fusion model. We expect these techniques to help mitigate some of the limitations and challenges associated with implementing transformer-based image fusion techniques.
+
+The results of these experiments will provide valuable insights into the effectiveness and efficiency of transformer-based image fusion techniques, advancing our understanding and potentially setting the stage for future work in this exciting area.
+
+\subsection{Method To Test Hypothesis 3} \label{subsec:met4}
+
+\textbf{Hypothesis 3} postulates that the combination of Transformer-based models and the new loss function will significantly improve task performances such as night vision enhancement, medical imaging, and surveillance tasks, allowing for better object detection, classification, and tracking in challenging lighting conditions. To test this hypothesis, we will adopt a multi-stage evaluation approach, drawing from both qualitative and quantitative assessment methods.
+
+\begin{itemize}
+    \item \textit{Dataset Preparation:} We will use a diverse range of images from the TNO dataset, which includes both visual and infrared images under various challenging lighting conditions. The dataset will be divided into a training set and a testing set to ensure the robustness of our model.
+    \item \textit{Model Training:} The Transformer-based image fusion model will be trained on the training set, with the new loss function serving as the guiding criterion for the training process. The model's parameters will be optimized iteratively to minimize the loss function.
+    \item \textit{Evaluation on Night Vision Enhancement:} To test the model's capability for night vision enhancement, we will use the testing set to create fused images under low-light conditions. The quality of these fused images will be evaluated qualitatively through visual inspection and quantitatively using various image quality metrics stated in Section \ref{subsec:Benchmarking} and \ref{subsec:metrics} such as Structural Similarity Index Metric (SSIM).
+    \item \textit{Evaluation on TNO:} We will similarly evaluate the model's performance on TNO dataset. The resultant images will be assessed for their clarity and detail. For surveillance tasks, we will specifically look at how well the model improves object detection.
+    \item \textit{Comparison with Baseline Methods:} Finally, we will compare the performance of our model with existing state-of-the-art methods in image fusion. The comparison will be based on both the quality of the fused images and the improvement in object detection, classification, and tracking.
+\end{itemize}
+
+The outcome of this evaluation should provide robust evidence regarding the effectiveness of our Transformer-based model and the new loss function in enhancing night vision, and improving medical imaging and surveillance tasks.
+
+\subsection{Method To Test Hypothesis 4} \label{subsec:met5}
+
+\textbf{Hypothesis 4} states that our proposed transformer-based approach will achieve a better balance between quantitative and qualitative performance in image fusion, overcoming the compromise between the two that is often observed in traditional deep learning methods. To validate this hypothesis, we will follow a structured testing methodology that encompasses both subjective (qualitative) and objective (quantitative) evaluation measures.
+
+\begin{itemize}
+    \item \textit{Model Application:} We will use our trained Transformer-based model to perform image fusion on the test set of the TNO dataset. This process will generate a set of fused images for further evaluation.
+
+    \item \textit{Qualitative Evaluation:} For the qualitative evaluation, we will conduct a perceptual study. Ideally, a group of human evaluators will be asked to rank the fused images based on their perceptual quality, considering factors like sharpness, contrast, detail preservation, and the absence of artifacts. Their subjective evaluations will provide us with a clear picture of the model's qualitative performance.
+
+    \item \textit{Quantitative Evaluation:} For the quantitative evaluation, we will employ several well-known image quality metrics, such as Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index Metric (SSIM), Feature Similarity Index Metric (FSIM), and others. These metrics will give us objective scores that represent the fused images' quality, thereby assessing the model's quantitative performance.
+
+    \item \textit{Comparative Study:} We will also compare the performance of our Transformer-based model against traditional deep learning methods. This will involve generating fused images using the traditional methods and conducting similar qualitative and quantitative evaluations. The comparative results will enable us to assess if our model successfully overcomes the trade-off often seen in these conventional methods.
+
+    \item \textit{Balancing Qualitative and Quantitative Evaluations:} Ultimately, the goal is to achieve a balance between qualitative and quantitative performances. We will use statistical analyses to determine if there's a correlation between the subjective scores (qualitative) and the image quality metrics (quantitative). A high correlation would suggest that our model has indeed achieved a better balance between these two aspects.
+
+\end{itemize}
+
+This multi-faceted testing approach should validate whether our transformer-based image fusion model excels in both qualitative and quantitative performance, and significantly mitigates the compromise commonly observed in traditional deep learning methods.
+
+
+\subsection{Method To Test Hypothesis 5} \label{subsec:met7}
+
+\textbf{Hypothesis 5} posits that our proposed approach will demonstrate computational efficiency, making it suitable for real-time applications, such as video surveillance and live medical imaging, without sacrificing the quality of the fused images. To validate this hypothesis, we will carry out experiments focusing on processing speed, computational resources, and image quality.
+
+\begin{itemize}
+    \item \textit{Processing Speed:} We will benchmark the processing speed of our transformer-based image fusion model by measuring the time it takes to process a set of images. This will involve timing the fusion process from the point of input to the point of output. We will consider not just single images but also sequences of images to simulate video processing.
+
+    \item \textit{Resource Utilization:} To evaluate the model's computational efficiency, we will monitor the computational resources utilized by the model during the image fusion process. This includes tracking CPU usage, GPU usage, memory footprint, and disk usage. Comparisons will be made with other state-of-the-art methods to highlight the computational advantages of our approach.
+
+    \item \textit{Image Quality:} To ensure that computational efficiency does not come at the cost of image quality, we will assess the quality of the output images using both subjective and objective evaluations, similar to the methods outlined in Hypothesis 4.
+
+    \item \textit{Real-time Application Scenarios:} We will further validate the hypothesis by implementing our model in real-time scenarios, such as video surveillance and live medical imaging. Here, the model will be tasked with fusing and processing images in real-time. This will allow us to assess its practical applicability and performance under realistic conditions.
+
+\end{itemize}
+
+By evaluating the processing speed, computational resource utilization, and output image quality in both standalone tests and real-time scenarios, we will be able to affirm the computational efficiency and real-time suitability of our proposed transformer-based image fusion approach, thereby testing Hypothesis 5.
+
+\subsection{Method To Test Hypothesis 6} \label{subsec:met8}
+
+\textbf{Hypothesis 6} asserts that the limitations and challenges associated with implementing Transformer-based image fusion techniques can be mitigated through proper model tuning, regularization, and architecture adjustments, leading to improved overall performance. To validate this hypothesis, we will engage in rigorous model development and optimization processes that consider several aspects:
+
+\begin{itemize}
+    \item \textit{Model Tuning:} We will conduct extensive hyperparameter tuning to identify the best set of parameters for our transformer model. Techniques such as grid search, random search, and Bayesian optimization will be employed to optimize parameters including the learning rate, batch size, dropout rate, and the number of transformer layers.
+
+    \item \textit{Regularization Techniques:} Various regularization techniques will be explored to prevent overfitting and ensure the generalization of our model. These techniques may include L1 and L2 regularization, dropout, early stopping, and data augmentation. The effects of these regularization techniques on model performance will be analyzed.
+
+    \item \textit{Architecture Adjustments:} We will experiment with different architecture modifications to overcome potential limitations associated with transformers. This might involve adjustments to the structure of attention mechanisms, incorporating skip connections, or experimenting with different types of transformers, like Axial-Attention Transformers.
+
+    \item \textit{Performance Evaluation:} After implementing the aforementioned strategies, the performance of the optimized transformer model will be evaluated using the same criteria outlined in Hypothesis 3 and Hypothesis 4.
+\end{itemize}
+
+
+By systematically investigating the effects of model tuning, regularization techniques, and architecture adjustments, we can evaluate the extent to which these strategies can mitigate the limitations and challenges associated with transformer-based image fusion techniques, thereby validating Hypothesis 6.
+
+
+
+\subsection{Experimental Setup Design} \label{sec:setup}
+In this chapter, our focus turns to a comprehensive exploration of the datasets utilized in our study, as well as an in-depth discussion of the computation platform that underpinned our experiments. We will meticulously examine the selection process and characteristics of the datasets employed for training and validation. Furthermore, we will shed light on the hardware and software environment that played a pivotal role in facilitating the execution of our research. By delving into these essential aspects, we aim to provide a clear understanding of the groundwork laid for our subsequent analyses and model development.
+
+\subsubsection{Dataset} \label{subsec:dataset}
+In Section \ref{sec:model}, the model training process comprises two distinct stages. Firstly, the autoencoder is trained to learn effective image representations. Subsequently, in the second stage, a fusion strategy is seamlessly integrated between the encoder and decoder, and the entire model is trained jointly. To achieve near-lossless image encoding and decoding in the autoencoder training, the MS-COCO \cite{lin2014microsoft} dataset was selected as the training data. The MS-COCO dataset is a widely recognized benchmark dataset in the computer vision community, consisting of a vast collection of diverse images spanning various real-world scenes and objects. Its large-scale and high-quality annotations made it a suitable choice for training the autoencoder component.
+
+\begin{figure}[htbp]
+    \centering
+    % \vspace{0.01cm}
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/mscoco1.jpg}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/mscoco2.jpg}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/mscoco3.jpg}
+        \caption{MS-COCO \cite{lin2014microsoft} Images}
+        \label{fig:ch3:mscoco}
+    \end{subfigure}
+    \vspace{0.01cm}
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/roadsceneV1.jpg}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/roadsceneV2.jpg}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/roadsceneV3.jpg}
+        \caption{RoadScene \cite{xu2020fusiondn} Visual Band Images}
+        \label{fig:ch3:tno}
+    \end{subfigure}
+    \vspace{0.01cm}
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/roadsceneI1.png}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/roadsceneI2.png}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/roadsceneI3.png}
+        \caption{RoadScene \cite{xu2020fusiondn} Infrared Band Images}
+        % \label{fig:ch3:mscoco}
+    \end{subfigure} 
+    \vspace{0.01cm}
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/tnovis1.png}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/tnovis2.png}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/tnovis3.png}
+        \caption{TNO \cite{toet2014tno} Visual Band Images}
+        \label{fig:ch3:tno}
+    \end{subfigure}
+    \vspace{0.01cm}
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/tnoir1.png}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/tnoir2.png}
+        \includegraphics[width=0.16\textwidth, height=0.08\textheight]{../01metu-msc-thesis/images/ch3/datasets/tnoir3.png}
+        \caption{TNO \cite{toet2014tno} Infrared Band Images}
+        % \label{fig:ch3:mscoco}
+    \end{subfigure} 
+    \caption{Sample Dataset Images}
+    \label{fig:ch3:dataset}
+\end{figure}
+
+For the second stage of training, which required aligned infrared and visual band images, the RoadScene dataset from FLIR was employed. The RoadScene \cite{xu2020aaai} dataset contains paired infrared and visual images, making it ideal for fusion-based experiments. This dataset is specifically designed for automotive vision applications, providing a realistic representation of scenarios encountered in driving environments.
+
+As of the completion of this thesis, there is no universally accepted standardized dataset dedicated explicitly to infrared and visual image fusion. However, certain datasets have gained prominence within the research community, and the TNO dataset is one such example. TNO \cite{toet2014tno} is commonly used as a benchmark dataset for evaluating the performance of state-of-the-art fusion methods. It comprises aligned infrared and visual image pairs, carefully captured under controlled conditions, and is accompanied by ground-truth reference data for objective evaluation.
+
+In summary, the model training process encompassed the utilization of three distinct datasets: MS-COCO for autoencoder training, RoadScene for fusion strategy integration, and TNO for comparative analysis with existing fusion techniques. These datasets played pivotal roles in the experimental evaluation, facilitating the meticulous assessment of the proposed model's effectiveness and offering valuable insights into the domain of infrared and visual image fusion. To ensure an unbiased and comprehensive evaluation, a meticulous partitioning approach was adopted, dividing each dataset into \textbf{80\%, 10\%, and 10\%} subsets, respectively assigned to the training, testing, and validation sets. This judicious partitioning scheme allowed for rigorous performance evaluation and the estimation of the model's generalization capabilities. By synergistically harnessing the capabilities of autoencoders, fusion strategies, and meticulously curated datasets, this study significantly contributes to the advancement of image fusion techniques, promising wide-ranging applications in domains such as medical imaging, surveillance, and remote sensing.
+
+\subsubsection{Computation Platform and Frameworks} \label{subsec:platform}
+
+For the hardware components, I utilized the \textbf{NVIDIA RTX 3060Ti} with 12GB of memory, paired with an \textbf{Intel i9} 10th generation CPU. These powerful components provided the computational muscle needed to handle the resource-intensive tasks involved in deep learning experiments efficiently.
+
+In terms of software and programming tools, \textbf{Python} served as the language of choice, offering a versatile and expressive environment for implementing various algorithms and data processing tasks. Leveraging the \textbf{PyTorch} framework further enhanced the development process, providing a robust and flexible platform for building and training deep learning models. The seamless integration with Python allowed for rapid prototyping and experimentation, ultimately contributing to the success of the research.
+
+In managing the development environment and dependencies, my preferred editor was \textbf{Visual Studio Code}. Its user-friendly interface and wide array of plugins provided a seamless and highly productive coding experience. Furthermore, to evaluate the fusion results based on the performance metrics described in Section \ref{subsec:metrics}, I employed \textbf{MATLAB}. Matlab's powerful analytical capabilities allowed for a comprehensive assessment of the fusion outcomes. Additionally, to ensure reproducibility and consistency throughout various project stages, I utilized Conda as the environment manager, enabling the creation of isolated environments with specific package versions. This approach facilitated robust experimentation and reliable results.
+
+By employing this powerful combination of hardware and software tools, I was able to tackle complex deep learning tasks, harness the potential of the NVIDIA RTX 3060Ti and Intel i9 10th generation CPU, and leverage Python, PyTorch, VS Code, MATLAB and Conda to streamline the development process, achieving reliable and impactful results.
+
+\subsubsection{Comparison Metrics} \label{subsec:metrics}
+For a rigorous and equitable evaluation of our proposed image fusion technique against state-of-the-art methods, we employed commonly used metrics that are widely recognized in the field of image fusion. These metrics take the infrared and visual input images, along with the output fused image, as inputs and generate fusion quality assessments. As outlined in Section \ref{subsec:platform}, we employ a MATLAB script obtained from the official RFN-Nest repository \cite{li2021rfn} to conduct comparisons based on the following metrics:
+
+\begin{itemize}
+    \item \textbf{Entropy (En)}: The Entropy metric is given by:
+    \begin{equation} \label{eq:entropy}
+    En = -\sum_{i=0}^{L-1} p(i) \log_2 p(i)
+    \end{equation}
+    where \( p(i) \) is the probability of intensity level \( i \) and \( L \) is the total number of intensity levels. Refer to Equation \ref{eq:entropy} for the mathematical formulation.
+    
+    \item \textbf{Sum of the Correlations of Differences (SCD)}: The SCD metric is defined as:
+    \begin{equation} \label{eq:scd}
+    SCD = \sum_{k=1}^{K} \rho(I_{fused} - I_{k})
+    \end{equation}
+    where \( \rho \) denotes the correlation coefficient, \( I_{fused} \) is the fused image, and \( I_{k} \) represents each of the \( K \) input images. The mathematical formulation is presented in Equation \ref{eq:scd}.
+    
+    \item \textbf{Mutual Information (MI)}: The MI metric is given by:
+    \begin{equation} \label{eq:mi}
+    MI(X,Y) = \sum_{x \in X} \sum_{y \in Y} p(x,y) \log \left( \frac{p(x,y)}{p(x) p(y)} \right)
+    \end{equation}
+    where \( p(x,y) \) is the joint probability distribution function of \( X \) and \( Y \), and \( p(x) \) and \( p(y) \) are the marginal probability distribution functions of \( X \) and \( Y \) respectively. The formulation is detailed in Equation \ref{eq:mi}.
+    
+    \item \textbf{Multi-Scale Structural Similarity Index (MS-SSIM)}: The MS-SSIM metric is described as:
+    \begin{equation} \label{eq:ms-ssim}
+    MS\text{-}SSIM(X,Y) = \prod_{i=1}^{N} [l(X,Y)]^{\alpha_i} [c(X,Y)]^{\beta_i} [s(X,Y)]^{\gamma_i}
+    \end{equation}
+    where \( l, c, \) and \( s \) are the luminance, contrast, and structure comparisons between images \( X \) and \( Y \) at scale \( i \). The parameters \( \alpha_i, \beta_i, \) and \( \gamma_i \) are the weights for each scale. Equation \ref{eq:ms-ssim} provides the mathematical representation.
+    
+    \item \textbf{Structural Similarity Index Metric (SSIM)}: The SSIM metric is formulated as:
+    \begin{equation} \label{eq:ssim}
+    SSIM(X,Y) = \frac{(2\mu_X \mu_Y + C_1)(2\sigma_{XY} + C_2)}{(\mu_X^2 + \mu_Y^2 + C_1)(\sigma_X^2 + \sigma_Y^2 + C_2)}
+    \end{equation}
+    where \( \mu_X \) and \( \mu_Y \) are the means of \( X \) and \( Y \), \( \sigma_X \) and \( \sigma_Y \) are the variances of \( X \) and \( Y \), and \( \sigma_{XY} \) is the covariance of \( X \) and \( Y \). \( C_1 \) and \( C_2 \) are constants to avoid instability. Refer to Eq \ref{eq:ssim} for the mathematical expression in detail.
+\end{itemize}
+
+
+By employing these well-established metrics, we objectively evaluated the performance of our image fusion technique and compared it to state-of-the-art methods, providing valuable insights into its strengths and limitations.
+

@@ -1,0 +1,35 @@
+\label{chp:introduction}
+The intricate evolution of perception systems across species, from minuscule insects to towering apex predators, showcases nature's mastery. As humans delve into technological innovation, we've engineered mechanical eyes that not only emulate but at times exceed their biological counterparts. This intertwining of natural instincts and modern camera technology manifests a limitless realm of perception. Central to computer vision is the spectrum of light, which extends from the visible colors our eyes discern, around 400 to 700 nanometers, to realms beyond human sight, including the warmth of infrared and the energy of ultraviolet waves. While humans are limited to a segment of this spectrum, technology unlocks a wider expanse, particularly through both visible and infrared imagery, heralding a revolutionary phase in computer vision. Image fusion leverages multiple image sources, offering enhanced clarity and understanding, and is pivotal in contemporary computer vision. Specifically, Visual-Infrared Image Fusion (VIF) melds visible and infrared spectrums, proving transformative for applications like night vision and thermal imaging. This fusion augments perception in low-visibility conditions, benefiting sectors like the military and security. Various techniques, from traditional pixel and feature-level fusion to advanced learning methods such as CNN-based and transform-based fusion, are employed to effectively merge these images, amplifying situational comprehension across applications.
+
+\subsection{Problem Definition}\label{sec:probdef}
+
+While deep learning methods excel at extracting pertinent features for image fusion, their primary focus on local features often neglects the overarching context within the image, a concern raised by Li et al. (2021)\cite{li2021rfn}. Transformer-based models, employing attention mechanisms, offer a solution, capturing wider context dependencies to refine fusion outcomes.
+
+A significant impediment in fusion techniques is crafting the appropriate loss function. Conventional methods rely heavily on the Structural Similarity Metric (SSIM) to ascertain similarity between the input visible band image and the fused output. This SSIM-centric approach has its limitations, given that its maximum value is only achieved when both images are identical. To address this, we suggest a novel loss function that places equal emphasis on congruence with both the visible band and infrared inputs. This dual-input consideration ensures optimal retention of essential information, bolstering the quality of the fusion.
+
+In response to the pressing need for enhanced image fusion techniques, our research bifurcates into two pivotal studies. The primary study delves deep into innovating the loss function. Central to this exploration is the creation of a loss function that harmonizes the similarity between both visible and infrared inputs. Traditional methods often marginalize this aspect, leading to subpar fusion results. Our proposed function seeks to remedy this, fostering a more efficient and meaningful fusion process.
+
+Through this structure, we aim to fully harness the potential of image fusion techniques, heralding not just advancements in current applications but also paving the way for future innovations.
+
+\subsection{Research Questions and Hypotheses} \label{sec:researchquestions}
+
+To gain a comprehensive understanding of the complexities surrounding image fusion, our research seeks to answer the following hypotheses, systematically divided into two studies based on their thematic focus:
+
+\subsubsection{New Loss Function Proposal}
+
+\begin{list}{}{}{}
+    \item \textbf{Hypothesis 1}: The new loss function, which emphasizes the similarity between both the visible band input and the infrared image input, will result in more informative and meaningful fused images compared to using Structural Similarity Metric (SSIM) as the guiding criterion.
+    \item \textbf{Hypothesis 2}: The proposed approach will surpass existing state-of-the-art image fusion methods in terms of visual quality, providing more detailed, sharper, and visually appealing fused images.
+\end{list}
+
+This structured presentation of research questions and hypotheses aims to provide a clear roadmap for our investigation. Through rigorous testing of these hypotheses, our ultimate goal is to validate or challenge them, leading to significant contributions to the field of image fusion. By systematically evaluating each hypothesis within the respective studies, we aim to draw conclusions that are both robust and comprehensive, thereby advancing the current state of knowledge within this domain.
+
+
+\subsubsection{A Unique Transformer Based Fusion Strategy}
+
+\begin{list}{}{}
+    \item \textbf{Hypothesis 3}: The combination of Transformer-based models and the new loss function will significantly improve night vision enhancement, medical imaging, and surveillance tasks, allowing for better object detection, classification, and tracking in challenging lighting conditions.
+    \item \textbf{Hypothesis 4}: The proposed transformer based approach will achieve a better balance between quantitative and qualitative performance in image fusion, overcoming the compromise between the two that is often observed in traditional deep learning methods.
+    \item \textbf{Hypothesis 5}: The proposed approach will demonstrate computational efficiency, making it suitable for real-time applications, such as video surveillance and live medical imaging, without sacrificing the quality of the fused images.
+    \item \textbf{Hypothesis 6}: The limitations and challenges associated with implementing Transformer-based image fusion techniques can be mitigated through proper model tuning, regularization, and architecture adjustments, leading to improved overall performance.
+\end{list}
