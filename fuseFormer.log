@@ -357,11 +357,6 @@ Underfull \hbox (badness 3872) in paragraph at lines 37--38
 
 [4 <../01metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf> <../01metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf>]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 64.
-
-
-
 pdfTeX warning: pdflatex (file ../01metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <../01metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf, id=54, 170.5572pt x 254.8722pt>
 File: ../01metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf Graphic file (type pdf)
