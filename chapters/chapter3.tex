@@ -6,14 +6,14 @@ In this chapter, we delve into the realm of infrared and visual band image fusio
 Image fusion can be segmented into three components: the feature extractor, feature fuser, and image reconstructor. The feature extractor derives multilevel features from input images, which the feature fuser then amalgamates into unified feature maps for each level. These consolidated features facilitate the final image reconstruction by the image reconstructor. Drawing parallels, the feature extractor aligns with the encoder of autoencoders (Section \ref{sec:AE}), and the image reconstructor mirrors autoencoders' decoder. The feature fuser harnesses both Convolutional Neural Networks (CNNs) from Section \ref{sec:CNN} and transformers from Section \ref{sec:Transformer}. CNNs adeptly handle local features, while transformers manage global contexts, thus marrying them enriches the fusion process, aiming for enhanced accuracy.
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.4\textwidth]{../01metu-msc-thesis/images/ch3/20230815all.drawio.pdf}
+    \includegraphics[width=0.4\textwidth]{../metu-msc-thesis/images/ch3/20230815all.drawio.pdf}
     \caption{High-Level Design of Model}
     \label{fig:ch3:highlevel}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{../01metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf}
+    \includegraphics[width=0.9\textwidth]{../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf}
     \caption{Detailed Design of Model}
     \label{fig:ch3:highlevel2}
 \end{figure}
@@ -26,7 +26,7 @@ Training autoencoders presents a set of challenges that require careful consider
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{../01metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf}
+    \includegraphics[width=0.5\textwidth]{../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf}
     \centering
     \caption{Autoencoder High-Level Design}
     \label{fig:ch3:encoderhighlevel}
@@ -66,14 +66,14 @@ By addressing these challenges and applying appropriate solutions, autoencoders 
     % \vspace{0.01cm}
     \begin{subfigure}[b]{\textwidth}
         \centering
-        \includegraphics[width=0.5\textwidth]{../01metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf}
+        \includegraphics[width=0.5\textwidth]{../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf}
         \caption{Encoder}
         \label{fig:ch3:encoder}
     \end{subfigure}
     \vspace{0.01cm}
     \begin{subfigure}[b]{\textwidth}
         \centering
-        \includegraphics[width=0.6\textwidth]{../01metu-msc-thesis/images/ch3/rnf-decoder.png}
+        \includegraphics[width=0.6\textwidth]{../metu-msc-thesis/images/ch3/rnf-decoder.png}
         \caption{Decoder}
         \label{fig:ch3:rfnnest:decoder}
     \end{subfigure}
@@ -123,7 +123,7 @@ $L_{SSIM}$. The Structural Similarity Index (SSIM) is a widely used metric for e
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{../01metu-msc-thesis/images/ch3/ssim.png}
+    \includegraphics[width=\textwidth]{../metu-msc-thesis/images/ch3/ssim.png}
     \caption{Diagram of the structural similarity (SSIM) measurement system \cite{ma2015perceptual}}
     \label{fig:ch3:ssim}
 \end{figure}
@@ -153,13 +153,13 @@ In short, the autoencoder depicted in Figure \ref{fig:ch3:encoder} is subjected 
     % \vspace{0.01cm}
     \begin{subfigure}[b]{\textwidth}
         \centering
-        \includegraphics{../01metu-msc-thesis/images/ch3/fuser.drawio.png}
+        \includegraphics{../metu-msc-thesis/images/ch3/fuser.drawio.png}
         \caption{Fusion Strategy High Level Design}
         \label{fig:ch3:fusionhighlevel}
     \end{subfigure}
     \begin{subfigure}[b]{\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{../01metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf}
+        \includegraphics[width=0.8\textwidth]{../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf}
         \caption{Fusion Strategy Detailed Design Per Each Scale}
         \label{fig:ch3:fusiondetailed}
     \end{subfigure}
@@ -255,7 +255,7 @@ To tackle the challenges outlined above, our approach commenced with the adoptio
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.99\textwidth]{../01metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf}
+    \includegraphics[width=0.99\textwidth]{../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf}
     \caption{Detailed Fusion Strategy}
     \label{fig:ch3:fusionM}
 \end{figure}
