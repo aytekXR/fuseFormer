@@ -32,7 +32,8 @@ akaerdem@metu.edu.tr}
 \maketitle
 
 \begin{abstract}
-Image fusion is a process where images obtained from different sensors are combined to generate a single image that benefits from complementary information. Recently, there has been a growing interest in image fusion, which involves fusing images from diverse sensors to produce an enhanced image. Although deep learning methods have been widely employed in state-of-the-art techniques to extract meaningful features for image fusion, these methods primarily focus on integrating local features while disregarding the broader context within the image. To overcome this limitation, Transformer-based models have emerged as a promising solution, aiming to capture general context dependencies through attention mechanisms. Inspired by this, we propose a novel image fusion approach that incorporates a transformer-based multi-scale fusion strategy, effectively considering both local and general context information, thus enhancing the overall fusion process. Our proposed method follows a two-stage training approach, where an auto-encoder is initially trained to extract deep features at multiple scales. Subsequently, the multi-scale features are fused using a combination of Convolutional Neural Networks (CNNs) and Transformers. The CNNs are utilized to capture local features, while the Transformer handles the integration of general context features. Notably, in contrast to similar methods, we propose novel loss functions to address the challenges associated with defining a loss function when ground truth for fusion is absent. Through extensive experiments on various benchmark datasets, our proposed method, along with the novel loss function definition, demonstrates superior performance compared to other competitive fusion algorithms. Overall, this thesis presents significant advancements in image fusion techniques, offering innovative approaches and contributing to the state-of-the-art in this field.
+    Image fusion combines data from different sensors to create a single image with enriched information. Despite the widespread use of deep learning in image fusion, current methods often focus on local features, neglecting broader contextual information. Addressing this limitation, we introduce a novel image fusion approach employing a transformer-based multi-scale strategy. This method captures both local and general context, improving overall fusion. Our two-stage training involves an auto-encoder for deep feature extraction and subsequent fusion of multi-scale features using Convolutional Neural Networks (CNNs) and Transformers. Unlike comparable approaches, we propose innovative loss functions to tackle the challenge of fusion without ground truth. Through extensive experiments on benchmark datasets, our method, coupled with the newly defined loss functions, outperforms other fusion algorithms.
+    % This thesis marks a significant advancement in image fusion, contributing novel techniques and enhancing the state-of-the-art in the field.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -41,7 +42,7 @@ Image Fusion, Visual Infrared Image Fusion, Transformer Based Image Fusion, Stru
 
 
 \section{Introduction}
-\input{chapters/chapter1}
+\input{chapters/1introduction.tex}
 
 \section{Related Work}
 \input{chapters/chapter2}
