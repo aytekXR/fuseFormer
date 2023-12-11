@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex fuseFormer"] 1701814189 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1701814190 0
+["bibtex fuseFormer"] 1702329930 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1702329981 0
   "./thesis.bib" 1701193931 34395 d7b451bd7b3e81adcfb49e445b26e203 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "fuseFormer.aux" 1701814190 6523 fb44fc3145b28eb6afcb3d9ae3183cc5 "pdflatex"
+  "fuseFormer.aux" 1702329980 5799 24b4062a14df760f65fa6fd8f1751612 "pdflatex"
   (generated)
   "fuseFormer.bbl"
   "fuseFormer.blg"
   (rewritten before read)
-["pdflatex"] 1701814189 "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1701814190 0
+["pdflatex"] 1702329980 "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1702329981 0
   "../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf" 1701193980 473106 4183f262b750931a28e694cd332a1ebd ""
   "../metu-msc-thesis/images/ch3/20230815all.drawio.pdf" 1701193980 23331 bbfc6b47e258ded4ef415b284836b9ac ""
   "../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf" 1701193980 162194 b11ee9098fc7bd473cca8f5743273543 ""
@@ -92,13 +92,13 @@
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "IEEEtran.cls" 1701193931 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" 1701721296 2469 f10d9b15065b3d50d2217485d1a8b791 ""
-  "chapters/1introduction.tex" 1701814187 5059 9d142beea3b857d1b2c16f7c348711b3 ""
-  "chapters/chapter2.tex" 1701193931 7043 d06a8274003fd7e292bed8d3b2c62b06 ""
+  "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" 1702329979 2467 0b60a1fdff025b01a8795b29e9a32a1d ""
+  "chapters/1intro.tex" 1702329943 3970 a0b18a86d7b3add93e72ab5339a0f5f5 ""
+  "chapters/2relatedw.tex" 1702329644 3385 c19ee8ee8813846d0ae2e137ce37f691 ""
   "chapters/chapter3.tex" 1701193931 38218 cb0b9ef4fb445e4e01f58c68bc1b9257 ""
-  "fuseFormer.aux" 1701814190 6523 fb44fc3145b28eb6afcb3d9ae3183cc5 "pdflatex"
-  "fuseFormer.bbl" 1701814189 7563 6ced45d78c15cd452b739ce7459a81da "bibtex fuseFormer"
-  "fuseFormer.tex" 1701721296 2469 f10d9b15065b3d50d2217485d1a8b791 ""
+  "fuseFormer.aux" 1702329980 5799 24b4062a14df760f65fa6fd8f1751612 "pdflatex"
+  "fuseFormer.bbl" 1702329930 6460 bc99f155a2ee26744caec82508ec24e6 "bibtex fuseFormer"
+  "fuseFormer.tex" 1702329979 2467 0b60a1fdff025b01a8795b29e9a32a1d ""
   (generated)
   "fuseFormer.aux"
   "fuseFormer.log"

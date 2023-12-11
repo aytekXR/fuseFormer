@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  6 DEC 2023 01:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  12 DEC 2023 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -311,26 +311,29 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
  (C:\Users\aayte\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (chapters/1introduction.tex [1{C:/Users/aayte/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+) (chapters/1intro.tex) (chapters/2relatedw.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{C:/Users/aayte/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-]) (chapters/chapter2.tex [2]) (chapters/chapter3.tex
+]) (chapters/chapter3.tex
 
-LaTeX Warning: Reference `subsec:dataset' on page 3 undefined on input line 3.
-
-
-LaTeX Warning: Reference `subsec:platform' on page 3 undefined on input line 3.
+LaTeX Warning: Reference `subsec:dataset' on page 2 undefined on input line 3.
 
 
-LaTeX Warning: Reference `sec:AE' on page 3 undefined on input line 6.
+LaTeX Warning: Reference `subsec:platform' on page 2 undefined on input line 3.
 
 
-LaTeX Warning: Reference `sec:CNN' on page 3 undefined on input line 6.
+LaTeX Warning: Reference `sec:AE' on page 2 undefined on input line 6.
+
+
+LaTeX Warning: Reference `sec:CNN' on page 2 undefined on input line 6.
 
 
 
 pdfTeX warning: pdflatex (file ../metu-msc-thesis/images/ch3/20230815all.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../metu-msc-thesis/images/ch3/20230815all.drawio.pdf, id=12, 335.33278pt x 161.64389pt>
+<../metu-msc-thesis/images/ch3/20230815all.drawio.pdf, id=9, 335.33278pt x 161.64389pt>
 File: ../metu-msc-thesis/images/ch3/20230815all.drawio.pdf Graphic file (type pdf)
 <use ../metu-msc-thesis/images/ch3/20230815all.drawio.pdf>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/20230815all.drawio.pdf  used on input line 9.
@@ -338,7 +341,7 @@ Package pdftex.def Info: ../metu-msc-thesis/images/ch3/20230815all.drawio.pdf  u
 
 
 pdfTeX warning: pdflatex (file ../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf, id=13, 6096.69713pt x 3470.88712pt>
+<../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf, id=10, 6096.69713pt x 3470.88712pt>
 File: ../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf Graphic file (type pdf)
 <use ../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf  used on input line 16.
@@ -348,10 +351,10 @@ Overfull \hbox (212.39685pt too wide) in paragraph at lines 16--17
  [][] 
  []
 
-[3 <../metu-msc-thesis/images/ch3/20230815all.drawio.pdf> <../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf>]
+[2 <../metu-msc-thesis/images/ch3/20230815all.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf, id=38, 211.7511pt x 133.45859pt>
+<../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf, id=23, 211.7511pt x 133.45859pt>
 File: ../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf Graphic file (type pdf)
 <use ../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf  used on input line 29.
@@ -366,18 +369,15 @@ Underfull \hbox (badness 3872) in paragraph at lines 37--38
 []\OT1/ptm/m/n/10 Despite their ca-pa-bil-i-ties, au-toen-coders may pro-duce
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf>]
+[3 <../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf> <../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf, id=53, 170.5572pt x 254.8722pt>
+<../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf, id=50, 170.5572pt x 254.8722pt>
 File: ../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf Graphic file (type pdf)
 <use ../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf  used on input line 69.
 (pdftex.def)             Requested size: 258.0pt x 385.59746pt.
-<../metu-msc-thesis/images/ch3/rnf-decoder.png, id=54, 883.3pt x 857.2025pt>
+<../metu-msc-thesis/images/ch3/rnf-decoder.png, id=51, 883.3pt x 857.2025pt>
 File: ../metu-msc-thesis/images/ch3/rnf-decoder.png Graphic file (type png)
 <use ../metu-msc-thesis/images/ch3/rnf-decoder.png>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/rnf-decoder.png  used on input line 76.
@@ -396,10 +396,13 @@ Overfull \hbox (264.0pt too wide) in paragraph at lines 67--80
 LaTeX Warning: Float too large for page by 67.93886pt on input line 82.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf> <../metu-msc-thesis/images/ch3/rnf-decoder.png>]
+
 LaTeX Warning: Reference `chp:results' on page 5 undefined on input line 88.
 
-[5 <../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf> <../metu-msc-thesis/images/ch3/rnf-decoder.png>]
-<../metu-msc-thesis/images/ch3/ssim.png, id=69, 2770.35pt x 1170.3725pt>
+<../metu-msc-thesis/images/ch3/ssim.png, id=66, 2770.35pt x 1170.3725pt>
 File: ../metu-msc-thesis/images/ch3/ssim.png Graphic file (type png)
 <use ../metu-msc-thesis/images/ch3/ssim.png>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/ssim.png  used on input line 126.
@@ -409,11 +412,11 @@ Overfull \hbox (264.0pt too wide) in paragraph at lines 126--127
  [][] 
  []
 
-[6 <../metu-msc-thesis/images/ch3/ssim.png>]
+[5]
 
-LaTeX Warning: Reference `chp:results' on page 7 undefined on input line 148.
+LaTeX Warning: Reference `chp:results' on page 6 undefined on input line 148.
 
-<../metu-msc-thesis/images/ch3/fuser.drawio.png, id=78, 240.9pt x 111.41624pt>
+<../metu-msc-thesis/images/ch3/fuser.drawio.png, id=74, 240.9pt x 111.41624pt>
 File: ../metu-msc-thesis/images/ch3/fuser.drawio.png Graphic file (type png)
 <use ../metu-msc-thesis/images/ch3/fuser.drawio.png>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/fuser.drawio.png  used on input line 156.
@@ -421,7 +424,7 @@ Package pdftex.def Info: ../metu-msc-thesis/images/ch3/fuser.drawio.png  used on
 
 
 pdfTeX warning: pdflatex (file ../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf, id=79, 965.52718pt x 695.7192pt>
+<../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf, id=75, 965.52718pt x 695.7192pt>
 File: ../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf Graphic file (type pdf)
 <use ../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf  used on input line 162.
@@ -437,25 +440,22 @@ Overfull \hbox (264.0pt too wide) in paragraph at lines 154--166
  []
 
 
+Underfull \vbox (badness 1755) has occurred while \output is active []
+
+ [6 <../metu-msc-thesis/images/ch3/ssim.png> <../metu-msc-thesis/images/ch3/fuser.drawio.png> <../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf>]
+
 LaTeX Warning: Reference `sec:probdef' on page 7 undefined on input line 178.
 
 
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
- [7 <../metu-msc-thesis/images/ch3/fuser.drawio.png> <../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf>]
-
-LaTeX Warning: Reference `chp:results' on page 8 undefined on input line 184.
+LaTeX Warning: Reference `chp:results' on page 7 undefined on input line 184.
 
 
-LaTeX Warning: Reference `subsec:metrics' on page 8 undefined on input line 184.
+LaTeX Warning: Reference `subsec:metrics' on page 7 undefined on input line 184.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
+[7]
 
 pdfTeX warning: pdflatex (file ../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf, id=100, 1016.83888pt x 747.75356pt>
+<../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf, id=97, 1016.83888pt x 747.75356pt>
 File: ../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf Graphic file (type pdf)
 <use ../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf>
 Package pdftex.def Info: ../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf  used on input line 258.
@@ -465,22 +465,22 @@ Overfull \hbox (258.84283pt too wide) in paragraph at lines 258--259
  [][] 
  []
 
-[9 <../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf>]
+[8 <../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf>]
 
-LaTeX Warning: Reference `sec:probdef' on page 10 undefined on input line 279.
+LaTeX Warning: Reference `sec:probdef' on page 9 undefined on input line 279.
 
 
 Overfull \hbox (65.63094pt too wide) detected at line 298
 []\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = [][] + [][]
  []
 
-) (fuseFormer.bbl [10]
-Underfull \hbox (badness 3668) in paragraph at lines 129--131
+) (fuseFormer.bbl [9]
+Underfull \hbox (badness 3668) in paragraph at lines 100--102
 []\OT1/ptm/m/n/8 Y. Fu, T. Xu, X. Wu, and J. Kit-tler, ``Ppt fu-sion: Pyra-mid
  []
 
 
-Underfull \hbox (badness 6876) in paragraph at lines 154--156
+Underfull \hbox (badness 6876) in paragraph at lines 130--132
 \OT1/ptm/m/n/8 ial at-ten-tion in mul-ti-di-men-sional trans-form-ers,'' \OT1/ptm/m/it/8 arXiv preprint
  []
 
@@ -496,7 +496,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
+[10
 
 ] (fuseFormer.aux)
  ***********
@@ -509,17 +509,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5824 strings out of 475248
- 99880 string characters out of 5757812
- 1941785 words of memory out of 5000000
- 27289 multiletter control sequences out of 15000+600000
+ 5816 strings out of 475248
+ 99693 string characters out of 5757812
+ 1940785 words of memory out of 5000000
+ 27281 multiletter control sequences out of 15000+600000
  599944 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,17n,77p,1623b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,17n,77p,1864b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on fuseFormer.pdf (11 pages, 942116 bytes).
+Output written on fuseFormer.pdf (10 pages, 936217 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
+ 168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
