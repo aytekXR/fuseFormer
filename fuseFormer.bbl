@@ -105,6 +105,11 @@ Z.~Wang, Y.~Chen, W.~Shao, H.~Li, and L.~Zhang, ``Swinfuse: A residual swin
   transformer fusion network for infrared and visible images,'' {\em IEEE
   Transactions on Instrumentation and Measurement}, vol.~71, pp.~1--12, 2022.
 
+\bibitem{ma2015perceptual}
+K.~Ma, K.~Zeng, and Z.~Wang, ``Perceptual quality assessment for multi-exposure
+  image fusion,'' {\em IEEE Transactions on Image Processing}, vol.~24, no.~11,
+  pp.~3345--3356, 2015.
+
 \bibitem{lin2014microsoft}
 T.-Y. Lin, M.~Maire, S.~Belongie, J.~Hays, P.~Perona, D.~Ramanan,
   P.~Doll{\'a}r, and C.~L. Zitnick, ``Microsoft coco: Common objects in
@@ -116,15 +121,6 @@ T.-Y. Lin, M.~Maire, S.~Belongie, J.~Hays, P.~Perona, D.~Ramanan,
 H.~Xu, J.~Ma, Z.~Le, J.~Jiang, and X.~Guo, ``Fusiondn: A unified densely
   connected network for image fusion,'' in {\em proceedings of the
   Thirty-Fourth AAAI Conference on Artificial Intelligence}, 2020.
-
-\bibitem{toet2014tno}
-A.~Toet {\em et~al.}, ``Tno image fusion dataset< https://figshare.
-  com/articles,'' {\em TN\_Image\_Fusion\_Dataset/1008029}, 2014.
-
-\bibitem{ma2015perceptual}
-K.~Ma, K.~Zeng, and Z.~Wang, ``Perceptual quality assessment for multi-exposure
-  image fusion,'' {\em IEEE Transactions on Image Processing}, vol.~24, no.~11,
-  pp.~3345--3356, 2015.
 
 \bibitem{ho2019axial}
 J.~Ho, N.~Kalchbrenner, D.~Weissenborn, and T.~Salimans, ``Axial attention in

@@ -17,85 +17,65 @@
 \citation{vs2022image,zhao2021dndt}
 \citation{vs2022image,zhao2021dndt,fu2021ppt,wang2022swinfuse}
 \citation{vs2022image,zhao2021dndt,fu2021ppt,wang2022swinfuse}
+\citation{li2021rfn}
+\citation{li2021rfn}
+\citation{li2021rfn}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
 \newlabel{chp:RelatedWork}{{II}{2}{}{}{}}
 \newlabel{sec:traditional}{{II}{2}{}{}{}}
 \newlabel{sec:Transformer}{{II}{2}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{2}{}\protected@file@percent }
 \newlabel{chp:b3}{{III}{2}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Model Selection}{2}{}\protected@file@percent }
-\newlabel{sec:model}{{\mbox  {III-A}}{2}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces High-Level Design of Model}}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Stage 1: Autoencoder Selection}{2}{}\protected@file@percent }
+\newlabel{subsec:aesel}{{\mbox  {III-A}}{2}{}{}{}}
+\citation{ma2015perceptual}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:ch3:highlevel}{{1}{2}{}{}{}}
-\newlabel{subsec:aesel}{{\mbox  {III-A}1}{2}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}1}Stage 1: Autoencoder Selection}{2}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Detailed Design of Model}}{3}{}\protected@file@percent }
-\newlabel{fig:ch3:highlevel2}{{2}{3}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Autoencoder High-Level Design}}{3}{}\protected@file@percent }
-\newlabel{fig:ch3:encoderhighlevel}{{3}{3}{}{}{}}
-\citation{li2021rfn}
-\citation{li2021rfn}
-\citation{li2021rfn}
-\citation{li2019infrared}
-\citation{lin2014microsoft}
-\newlabel{fig:ch3:encoder}{{4a}{4}{}{}{}}
-\newlabel{sub@fig:ch3:encoder}{{a}{4}{}{}{}}
-\newlabel{fig:ch3:rfnnest:decoder}{{4b}{4}{}{}{}}
-\newlabel{sub@fig:ch3:rfnnest:decoder}{{b}{4}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces RFN-Nest Model Architecture\cite  {li2021rfn}}}{4}{}\protected@file@percent }
-\newlabel{fig:ch3:rfnnest}{{4}{4}{}{}{}}
-\citation{xu2020aaai}
-\citation{toet2014tno}
+\newlabel{fig:ch3:stage1}{{1a}{3}{}{}{}}
+\newlabel{sub@fig:ch3:stage1}{{a}{3}{}{}{}}
+\newlabel{fig:ch3:encoder}{{1b}{3}{}{}{}}
+\newlabel{sub@fig:ch3:encoder}{{b}{3}{}{}{}}
+\newlabel{fig:ch3:decoder}{{1c}{3}{}{}{}}
+\newlabel{sub@fig:ch3:decoder}{{c}{3}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Stage 1 Configuration}}{3}{}\protected@file@percent }
+\newlabel{fig:ch3:stage1all}{{1}{3}{}{}{}}
+\newlabel{eq:aeloss}{{1}{3}{}{}{}}
+\newlabel{eq:aelosspixel}{{2}{3}{}{}{}}
+\newlabel{eq:Frobenius}{{3}{3}{}{}{}}
+\newlabel{eq:ssimloss}{{4}{3}{}{}{}}
+\newlabel{eq:ssim}{{5}{3}{}{}{}}
 \citation{ma2015perceptual}
-\citation{ma2015perceptual}
-\citation{ma2015perceptual}
-\citation{ma2015perceptual}
-\newlabel{subsec:aeloss}{{\mbox  {III-A}2}{5}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}2}Stage 1: Training of The Autoencoder}{5}{}\protected@file@percent }
-\newlabel{eq:aeloss}{{1}{5}{}{}{}}
-\newlabel{eq:aelosspixel}{{2}{5}{}{}{}}
-\newlabel{eq:Frobenius}{{3}{5}{}{}{}}
-\newlabel{eq:ssimloss}{{4}{5}{}{}{}}
-\newlabel{eq:ssim}{{5}{5}{}{}{}}
 \citation{lin2014microsoft}
 \citation{xu2020aaai}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Diagram of the structural similarity (SSIM) measurement system \cite  {ma2015perceptual}}}{6}{}\protected@file@percent }
-\newlabel{fig:ch3:ssim}{{5}{6}{}{}{}}
-\newlabel{subsec:fusion}{{\mbox  {III-A}3}{6}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}3}Stage 2: Fusion Strategy Selection}{6}{}\protected@file@percent }
-\newlabel{fig:ch3:fusionhighlevel}{{6a}{6}{}{}{}}
-\newlabel{sub@fig:ch3:fusionhighlevel}{{a}{6}{}{}{}}
-\newlabel{fig:ch3:fusiondetailed}{{6b}{6}{}{}{}}
-\newlabel{sub@fig:ch3:fusiondetailed}{{b}{6}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Fusion Strategy}}{6}{}\protected@file@percent }
-\newlabel{fig:ch3:fusion}{{6}{6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Stage 2: Fusion Strategy Selection}{4}{}\protected@file@percent }
+\newlabel{subsec:fusion}{{\mbox  {III-B}}{4}{}{}{}}
+\newlabel{fig:ch3:stage2}{{2a}{4}{}{}{}}
+\newlabel{sub@fig:ch3:stage2}{{a}{4}{}{}{}}
+\newlabel{fig:ch3:fusion}{{2b}{4}{}{}{}}
+\newlabel{sub@fig:ch3:fusion}{{b}{4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Stage 2 Configuration}}{4}{}\protected@file@percent }
+\newlabel{fig:ch3:stage2all}{{2}{4}{}{}{}}
 \citation{ho2019axial}
 \citation{wang2020axial}
-\newlabel{eq:selfattention}{{6}{7}{}{}{}}
-\newlabel{eq:axialH}{{7}{7}{}{}{}}
+\newlabel{eq:selfattention}{{6}{5}{}{}{}}
+\newlabel{eq:axialH}{{7}{5}{}{}{}}
+\newlabel{eq:axialW}{{8}{5}{}{}{}}
 \citation{vs2022image}
 \citation{xu2020aaai}
-\newlabel{eq:axialW}{{8}{8}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Detailed Fusion Strategy}}{8}{}\protected@file@percent }
-\newlabel{fig:ch3:fusionM}{{7}{8}{}{}{}}
 \citation{ma2015perceptual}
 \bibstyle{ieeetr}
 \bibdata{thesis}
 \bibcite{li2021rfn}{1}
 \bibcite{dosovitskiy2020image}{2}
 \bibcite{liu2021swin}{3}
+\newlabel{eq:fuseloss}{{9}{6}{}{}{}}
+\newlabel{eq:fusessimloss}{{10}{6}{}{}{}}
+\newlabel{eq:fusepixelloss}{{11}{6}{}{}{}}
+\@writefile{toc}{\contentsline {section}{References}{6}{}\protected@file@percent }
 \bibcite{bin2016efficient}{4}
 \bibcite{zhang2013dictionary}{5}
 \bibcite{hu2017adaptive}{6}
 \bibcite{he2017infrared}{7}
 \bibcite{liu2012robust}{8}
-\newlabel{subsec:fusionloss}{{\mbox  {III-A}4}{9}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}4}Stage 2: Training of The Autoencoder with Fusion Strategy}{9}{}\protected@file@percent }
-\newlabel{eq:fuseloss}{{9}{9}{}{}{}}
-\newlabel{eq:fusessimloss}{{10}{9}{}{}{}}
-\newlabel{eq:fusepixelloss}{{11}{9}{}{}{}}
-\@writefile{toc}{\contentsline {section}{References}{9}{}\protected@file@percent }
 \bibcite{liu2018infrared}{9}
 \bibcite{li2019infrared}{10}
 \bibcite{raza2020pfaf}{11}
@@ -108,10 +88,9 @@
 \bibcite{zhao2021dndt}{18}
 \bibcite{fu2021ppt}{19}
 \bibcite{wang2022swinfuse}{20}
-\bibcite{lin2014microsoft}{21}
-\bibcite{xu2020aaai}{22}
-\bibcite{toet2014tno}{23}
-\bibcite{ma2015perceptual}{24}
-\bibcite{ho2019axial}{25}
-\bibcite{wang2020axial}{26}
-\gdef \@abspage@last{10}
+\bibcite{ma2015perceptual}{21}
+\bibcite{lin2014microsoft}{22}
+\bibcite{xu2020aaai}{23}
+\bibcite{ho2019axial}{24}
+\bibcite{wang2020axial}{25}
+\gdef \@abspage@last{7}
