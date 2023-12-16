@@ -1,94 +1,46 @@
 \label{chp:b3}
 
-In this chapter, we delve into the realm of infrared and visual band image fusion using transformers, offering a detailed account of our experimental setup and the rationale for our model selection that marries autoencoders with fusion transformers. The robustness of our research is grounded in the carefully curated datasets described in Section \ref{subsec:dataset}, which encompass diverse real-world scenarios and are tailored for compatibility with our fusion model. The infrastructure supporting our research, detailed in Section \ref{subsec:platform}, boasts state-of-the-art GPUs, enhancing our model's training and inference speeds. Our image fusion model's foundation, the autoencoder, is explored in Section \ref{subsec:aesel}, highlighting its capability to distill crucial features from both image bands, subsequently processed by our fusion transformer—a novel yet unclaimed pioneering approach in the field—described in Section \ref{subsec:fusion}. Our commitment to refining image fusion is further emphasized by our tailored loss functions, delineated in Sections \ref{subsec:aeloss} and \ref{subsec:fusionloss}, which play pivotal roles in our model's training to achieve superior fusion results. Through this exploration, we aspire to advance the horizons of multi-modal image processing, heralding advancements in areas like remote sensing and surveillance.
-\subsection{Model Selection} \label{sec:model}
+Image fusion can be decomposed into three key components: the feature extractor, feature fuser, and image reconstructor. The feature extractor is responsible for extracting multilevel features from input images. Subsequently, the feature fuser amalgamates these extracted features into unified feature maps for each level. These consolidated features play a crucial role in the final image reconstruction, orchestrated by the image reconstructor.
 
-Image fusion can be segmented into three components: the feature extractor, feature fuser, and image reconstructor. The feature extractor derives multilevel features from input images, which the feature fuser then amalgamates into unified feature maps for each level. These consolidated features facilitate the final image reconstruction by the image reconstructor. Drawing parallels, the feature extractor aligns with the encoder of autoencoders (Section \ref{sec:AE}), and the image reconstructor mirrors autoencoders' decoder. The feature fuser harnesses both Convolutional Neural Networks (CNNs) from Section \ref{sec:CNN} and transformers from Section \ref{sec:Transformer}. CNNs adeptly handle local features, while transformers manage global contexts, thus marrying them enriches the fusion process, aiming for enhanced accuracy.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.4\textwidth]{../metu-msc-thesis/images/ch3/20230815all.drawio.pdf}
-    \caption{High-Level Design of Model}
-    \label{fig:ch3:highlevel}
-\end{figure}
-w
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\textwidth]{../metu-msc-thesis/images/ch3/20230815STAGE2.drawio.pdf}
-    \caption{Detailed Design of Model}
-    \label{fig:ch3:highlevel2}
-\end{figure}
+In terms of analogy, the feature extractor corresponds to the encoder in autoencoders, while the image reconstructor aligns with the decoder in autoencoders. The feature fuser leverages both Convolutional Neural Networks (CNNs) and transformers, with CNNs adeptly managing local features and transformers overseeing global contexts. This amalgamation enhances the fusion process, ultimately aiming to improve accuracy.
 
-Given the problem's complexity and the proposed model configuration, it is essential to conduct in-depth analyses of each aspect. Therefore, the subsequent sections, from \ref{subsec:aesel} to \ref{subsec:fusionloss}, delve into a comprehensive exploration of the model's inner workings, the datasets employed during experimentation, and the design of the loss function used to train the model. This deeper understanding will shed light on the model's capabilities and limitations, providing a solid foundation for testing and evaluating the proposed hypothesis.
+Our approach involves a two-stage training process. In the initial stage, we train an autoencoder, originally derived from RFN-Nest \cite{li2021rfn} as illustrated in Figure \ref{fig:ch3:rfnnest}. Subsequently, in the second stage, we train our fusion block, depicted in Figure \ref{fig:fusionblock}, in conjunction with the previously trained autoencoder.
 
-\subsubsection{Stage 1: Autoencoder Selection} \label{subsec:aesel}
-
-Training autoencoders presents a set of challenges that require careful consideration and effective solutions. One of the primary obstacles encountered is the vanishing or exploding gradients during backpropagation, which can hinder the convergence of the model. To overcome this, using activation functions like $ReLU$ and employing gradient clipping techniques can stabilize the training process. Another critical issue is overfitting, where the model becomes too specialized to the training data. Regularization methods such as $L1$ or $L2$ regularization and dropout can help prevent overfitting and improve generalization.
+\subsection{Stage 1: Autoencoder Selection} \label{subsec:aesel}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{../metu-msc-thesis/images/ch3/20230815stage1.drawio.pdf}
-    \centering
-    \caption{Autoencoder High-Level Design}
-    \label{fig:ch3:encoderhighlevel}
-\end{figure}
-
-Additionally, selecting the right dimension for the latent space is vital in autoencoders. A comprehensive hyperparameter search and evaluation using techniques like cross-validation can guide the choice of an appropriate latent space dimension. Moreover, traditional autoencoders might struggle with multimodal data, producing unimodal outputs.Data preprocessing also plays a crucial role in training autoencoders. Careful normalization, scaling, and augmentation techniques can improve the model's robustness and performance. However, dealing with large and deep autoencoder architectures can be computationally expensive. To address this issue, optimizing the model architecture, reducing the number of parameters, and utilizing hardware accelerators like GPUs or TPUs can significantly speed up training.
-
-Despite their capabilities, autoencoders may produce learned features that lack human interpretability. Techniques like activation maximization and feature visualization can aid in understanding the representations learned by the model. Additionally, enforcing sparsity constraints in the encoder can encourage the extraction of more interpretable and compact features.
-
-By addressing these challenges and applying appropriate solutions, autoencoders can become powerful tools for learning meaningful representations, enabling a wide range of applications in various domains. The combination of theoretical insights and practical strategies is essential for designing robust autoencoder architectures that can tackle complex real-world problems effectively.
-
-\begin{list}{}{}
-    \item \textbf{Vanishing or Exploding Gradients:}
-    Autoencoders, especially deep autoencoders with multiple layers, can suffer from the vanishing or exploding gradient problem during backpropagation. This occurs when the gradients become too small (vanishing) or too large (exploding), leading to slow convergence or instability during training. \textbf{Solution}: To mitigate the vanishing gradient problem, use activation functions that are less prone to saturation, such as ReLU (Rectified Linear Unit). Additionally, consider using gradient clipping techniques to prevent gradients from exploding during backpropagation.
-    
-    \item \textbf{Overfitting:}
-    Autoencoders are prone to overfitting, especially when the network architecture is too complex or when the training dataset is limited. Overfitting occurs when the model becomes too specific to the training data and fails to generalize well to unseen data. \textbf{Solution}: Employ regularization techniques like L1 or L2 regularization to penalize large weights and prevent overfitting. You can also use dropout, where neurons are randomly dropped during training, to reduce interdependence among neurons and improve generalization.
-    
-    \item \textbf{Choice of Latent Space Dimension:}
-    Selecting the appropriate dimensionality for the latent space is crucial in autoencoders. If the latent space is too small, it may not capture all the essential features, leading to information loss. Conversely, a large latent space may lead to the model memorizing the training data, resulting in poor generalization. \textbf{Solution}: Perform a hyperparameter search to determine the optimal latent space dimension using techniques like grid search or random search. Use techniques such as cross-validation to evaluate the model's performance with different latent space dimensions and choose the one that strikes a balance between capturing essential features and avoiding overfitting.
-    
-    \item \textbf{Unimodal Outputs:}
-    Standard autoencoders often produce unimodal outputs, which can limit their ability to handle multimodal data effectively. For tasks where multiple plausible outputs exist for a given input, autoencoders may struggle to capture this variability. \textbf{Solution}: For tasks involving multimodal data, consider using variational autoencoders (VAEs) or generative adversarial networks (GANs) that can produce diverse and realistic outputs. These models can learn a richer representation of the data, allowing for the generation of multiple plausible outputs for a given input.
-    
-    \item \textbf{High Computational Cost:}
-    Deep autoencoders with many layers and parameters can be computationally expensive to train, requiring substantial computational resources and time. \textbf{Solution}: Optimize the model architecture and reduce the number of parameters to lower the computational burden. Consider using transfer learning or pre-trained encoders to speed up training. Utilize hardware accelerators, such as GPUs or TPUs, to expedite the training process.
-    
-    \item \textbf{Choosing the Right Loss Function:}
-    The choice of the loss function can significantly impact the autoencoder's performance. Selecting an appropriate loss function for a specific task is crucial, and using an unsuitable one may lead to suboptimal results. \textbf{Solution}: Select a loss function that aligns with the specific task and data characteristics. For example, mean squared error (MSE) is suitable for continuous data, while binary cross-entropy is appropriate for binary data. Explore custom loss functions tailored to the unique requirements of the problem. In our experiment we have used the Eq \ref{eq:aeloss} to direct the training.
-    
-    \item \textbf{Lack of Interpretable Features:}
-    While autoencoders can learn useful representations, the learned features may not always be human-interpretable, making it challenging to understand what specific features the model has captured. \textbf{Solution}: Investigate techniques for interpretability, such as activation maximization or feature visualization, to gain insights into the learned representations. Additionally, consider using sparsity constraints in the autoencoder's encoder to encourage the extraction of more interpretable and compact features.
-\end{list}
-
-\begin{figure}[htbp]
-    \centering
-    % \vspace{0.01cm}
     \begin{subfigure}[b]{\textwidth}
-        \centering
-        \includegraphics[width=0.5\textwidth]{../metu-msc-thesis/images/ch3/20230815encoder.drawio.pdf}
-        \caption{Encoder}
+        \includegraphics[width=0.4\textwidth]{imgs/stage1.pdf}
+        \captionsetup{justification=raggedright,singlelinecheck=false}
+        \caption{Block Diagram}
+        \label{fig:ch3:stage1}
+    \end{subfigure}
+    \vspace{0.01cm}
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=0.4\textwidth]{imgs/encoder.pdf}
+        \captionsetup{justification=raggedright,singlelinecheck=false}
+        \caption{RFN-Nest \cite{li2021rfn} Encoder}
         \label{fig:ch3:encoder}
     \end{subfigure}
     \vspace{0.01cm}
     \begin{subfigure}[b]{\textwidth}
-        \centering
-        \includegraphics[width=0.6\textwidth]{../metu-msc-thesis/images/ch3/rnf-decoder.png}
-        \caption{Decoder}
-        \label{fig:ch3:rfnnest:decoder}
-    \end{subfigure}
-    \caption{RFN-Nest Model Architecture\cite{li2021rfn}}
-    \label{fig:ch3:rfnnest}
+        \includegraphics[width=0.4\textwidth]{imgs/decoder.png}
+        \captionsetup{justification=raggedright,singlelinecheck=false}
+        \caption{RFN-Nest \cite{li2021rfn} Decoder}
+        \label{fig:ch3:decoder}
+    \end{subfigure} 
+    \caption{Stage 1 Configuration}
+    \label{fig:ch3:stage1all}
 \end{figure}
 
-To address the array of challenges outlined earlier, our approach commenced by adopting the autoencoder employed in RFN-Nest \cite{li2021rfn} as the base model which is also adopted from DenseFuse \cite{li2019infrared} paper autoencoder. This autoencoder possesses the ability to extract multilevel features from input images and successfully reconstructs the original image by decoding these feature maps into a single coherent representation. In order to tailor the model to our specific problem requirements, we re-trained this base autoencoder using the MS-COCO \cite{lin2014microsoft} dataset, initializing the network with random weights. The process of training the autoencoder with the MS-COCO dataset resulted in the creation of a pretrained autoencoder, which effectively captures essential features from the input data.
+Training autoencoders presents a set of challenges that require careful consideration and effective solutions. One of the primary obstacles encountered is the vanishing or exploding gradients during backpropagation, which can hinder the convergence of the model. To overcome this, using activation functions like $ReLU$ and employing gradient clipping techniques can stabilize the training process. Another critical issue is overfitting, where the model becomes too specialized to the training data. Regularization methods such as $L1$ or $L2$ regularization and dropout can help prevent overfitting and improve generalization.
 
-Subsequently, we pursued fine-tuning the pretrained autoencoder with a lower learning rate using the RoadScene \cite{xu2020aaai} dataset. This dataset contains both visual band and infrared images, allowing us to incorporate valuable information from both domains during the fine-tuning process. As a result, the autoencoder underwent a refined training stage, where it fine-tuned its feature extraction and reconstruction capabilities with the RoadScene dataset. The conclusion of this stage yielded a fully capable autoencoder that excels at encoding and decoding input images, achieving minimal loss in the process.
+In the realm of autoencoders, choosing the right latent space dimension is crucial. A thorough hyperparameter search, including techniques like cross-validation, guides this selection. Autoencoders face challenges with multimodal data and computational demands, necessitating effective data preprocessing and optimization strategies.
 
-The comprehensive details of the stage 1 training and the subsequent fine-tuning process can be found in Section \ref{chp:results}, providing an in-depth analysis of the autoencoder's performance and the effect of leveraging different datasets during training. Our staged training methodology allowed us to progressively enhance the model's proficiency in feature extraction and image reconstruction, leading to a robust autoencoder model primed for further investigation and integration within our proposed fusion framework. In the subsequent sections, we present the extensive results obtained from this model, demonstrating its efficacy in image fusion and comparing it with existing state-of-the-art fusion methods on the TNO dataset \cite{toet2014tno}. Moreover, we delve into the implications of these findings, shedding light on the potential applications and future directions for advancing image fusion techniques. 
+Despite their capabilities, autoencoders may yield features lacking human interpretability. Techniques like activation maximization and feature visualization aid in deciphering model representations. Our approach adopts an autoencoder from RFN-Nest and DenseFuse, fine-tuning it on the MS-COCO and RoadScene datasets for robust feature extraction. Detailed in Section \ref{chp:results}, this staged training produces a proficient autoencoder. Examined on the TNO dataset, the findings illuminate potential applications and future directions for advancing image fusion techniques.
 
-\subsubsection{Stage 1: Training of The Autoencoder} \label{subsec:aeloss}
-As mentioned in Section \ref{subsec:aesel}, the initial phase of the training process involves instructing the encoder network to capture multi-scale deep features. Concurrently, the decoder network is also trained to reconstruct the input image, utilizing the aforementioned multi-scale deep features. The training framework of the auto-encoder network is depicted in Figure \ref{fig:ch3:encoder}. Distinguished from previous research, our feature extraction component integrates a down-sampling operation via max pooling, facilitating the extraction of deep features at various scales. These extracted multi-scale deep features are then fed into the decoder network for the purpose of reconstructing the input image. Leveraging short cross-layer connections ensures the comprehensive utilization of the multi-scale deep features in the image reconstruction process.
+The initial phase of the training process involves instructing the encoder network to capture multi-scale deep features. Concurrently, the decoder network is also trained to reconstruct the input image, utilizing the aforementioned multi-scale deep features. The training framework of the auto-encoder network is depicted in Figure \ref{fig:ch3:rfnnest}. Distinguished from previous research, our feature extraction component integrates a down-sampling operation via max pooling, facilitating the extraction of deep features at various scales. These extracted multi-scale deep features are then fed into the decoder network for the purpose of reconstructing the input image. Leveraging short cross-layer connections ensures the comprehensive utilization of the multi-scale deep features in the image reconstruction process.
 
 The loss function, denoted as $L_{ae}$, serves as the training criterion for the autoencoder network and is defined in the subsequent manner:
 
@@ -121,13 +73,6 @@ The second term in Eq \ref{eq:aeloss} is the SSIM loss $L_{SSIM}$ is defined as 
 where $SSIM(.)$ is the structural similarity measure \cite{ma2015perceptual} which quantifies the structural similarity of the two images. The structural similarity between Input and Output is constrained by
 $L_{SSIM}$. The Structural Similarity Index (SSIM) is a widely used metric for evaluating the similarity between two images. It aims to capture not only the pixel-wise differences but also the structural information and perceptual quality of the images. The $SSIM(.)$ is formulated as in Eq \ref{eq:ssim} and Figure \ref{fig:ch3:ssim}.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{../metu-msc-thesis/images/ch3/ssim.png}
-    \caption{Diagram of the structural similarity (SSIM) measurement system \cite{ma2015perceptual}}
-    \label{fig:ch3:ssim}
-\end{figure}
-
 \begin{equation}\label{eq:ssim}
 \text{SSIM}(x, y) = \frac{{(2\mu_x\mu_y + C_1) \cdot (2\sigma_{xy} + C_2)}}{{(\mu_x^2 + \mu_y^2 + C_1) \cdot (\sigma_x^2 + \sigma_y^2 + C_2)}}
 \end{equation}
@@ -145,41 +90,42 @@ The Structural Similarity Index ($SSIM$) is a metric that quantifies the similar
 
 The equation for $SSIM$ ($SSIM(.)$) in Eq. (\ref{eq:ssim}) constrains its output to the range of $[-1,1]$, which consequently bounds the $L_{SSIM}$ loss function (as defined in Eq. (\ref{eq:ssimloss})) to the interval $[0,2]$. In this context, lower values of $L_{SSIM}$ indicate better performance with respect to $SSIM$. In contrast, the $L_{pixel}$ loss is unbounded. To balance the impact of both $L_{pixel}$ and $L_{SSIM}$ during training, the trade-off parameter $\alpha$ in Eq. (\ref{eq:aeloss}) governs their relative magnitudes.
 
-In short, the autoencoder depicted in Figure \ref{fig:ch3:encoder} is subjected to training using the MS-COCO dataset \cite{lin2014microsoft} and the RoadScene dataset \cite{xu2020aaai}. The training process is guided by the loss function presented in Eq. (\ref{eq:aeloss}). Comprehensive assessments of the autoencoder's performance are presented, encompassing both quantitative and qualitative evaluations. Detailed results can be found in the Section \ref{chp:results}.
+In short, the autoencoder depicted in Figure \ref{fig:ch3:encoder} is subjected to training using the MS-COCO dataset \cite{lin2014microsoft} and the RoadScene dataset \cite{xu2020aaai}. The training process is guided by the loss function presented in Eq. (\ref{eq:aeloss}). Comprehensive assessments of the autoencoder's performance are presented, encompassing both quantitative and qualitative evaluations. 
 
-\subsubsection{Stage 2: Fusion Strategy Selection} \label{subsec:fusion}
+\subsection{Stage 2: Fusion Strategy Selection} \label{subsec:fusion}
 
 \begin{figure}[htbp]
-    % \vspace{0.01cm}
+    \centering
     \begin{subfigure}[b]{\textwidth}
-        \centering
-        \includegraphics{../metu-msc-thesis/images/ch3/fuser.drawio.png}
-        \caption{Fusion Strategy High Level Design}
-        \label{fig:ch3:fusionhighlevel}
+        \includegraphics[width=0.5\textwidth]{imgs/stage2.pdf}
+        \captionsetup{justification=raggedright,singlelinecheck=false}
+        \caption{Block Diagram}
+        \label{fig:ch3:stage2}
     \end{subfigure}
+    \vspace{0.01cm}
     \begin{subfigure}[b]{\textwidth}
-        \centering
-        \includegraphics[width=0.8\textwidth]{../metu-msc-thesis/images/ch3/20230815transformer.drawio.pdf}
-        \caption{Fusion Strategy Detailed Design Per Each Scale}
-        \label{fig:ch3:fusiondetailed}
+        \includegraphics[width=0.5\textwidth]{imgs/transformerblok.pdf}
+        \captionsetup{justification=raggedright,singlelinecheck=false}
+        \caption{Fusion Block}
+        \label{fig:ch3:fusion}
     \end{subfigure}
-    \caption{Fusion Strategy}
-    \label{fig:ch3:fusion}
+    \caption{Stage 2 Configuration}
+    \label{fig:ch3:stage2all}
 \end{figure}
 
-Referenced in Section \ref{subsec:aesel}, the process involved in accurately extracting multi-scale feature maps, coupled with the decoding and reconstruction of the original image as illustrated in Figure \ref{fig:ch3:encoderhighlevel}, has been previously discussed. This process is primarily concerned with the extraction of complex features at various scales which are intrinsic to image data. The essence of multi-scale feature extraction is to gather spatially diverse information from the image at different resolutions, thereby allowing for a more robust representation of the image data.
+The process involved in accurately extracting multi-scale feature maps, coupled with the decoding and reconstruction of the original image as illustrated in Figure \ref{fig:ch3:stage1}, has been previously discussed. This process is primarily concerned with the extraction of complex features at various scales which are intrinsic to image data. The essence of multi-scale feature extraction is to gather spatially diverse information from the image at different resolutions, thereby allowing for a more robust representation of the image data.
 
 Presently, the emphasis will shift to the application of separate encoders for the extraction of multi-scale features from both visual and infrared band images. The process entails the deployment of these encoders, each uniquely purposed for their respective image band. This is important as different image bands often contain distinct but complimentary information. For instance, \textbf{the visual image band, which relies on the visible light spectrum, presents color and texture details, while the infrared band, capturing non-visible light, provides thermal information}.
 
-The outputs from these separate encoders are then merged into a single multi-scale feature map. This fusion process is a crucial step as it combines diverse features from different bands, enhancing the feature representation. It allows the model to leverage the strengths of each band, thereby improving the overall effectiveness of the feature extraction process.
+The outputs from these separate encoders are then merged into a single multi-scale feature map with fusion block depicted in Figure \ref{fig:ch3:fusion} per scale. This fusion process is a crucial step as it combines diverse features from different bands, enhancing the feature representation. It allows the model to leverage the strengths of each band, thereby improving the overall effectiveness of the feature extraction process.
 
 Following the fusion, the resulting multi-scale feature maps are subsequently decoded, leading to the reconstruction of the original image, as depicted in Figure \ref{fig:ch3:highlevel}. It is important to note that this decoding phase does not merely entail the generation of a visually coherent image. Rather, it reconstructs an image that encapsulates the combined information from both bands. In essence, the reconstructed image, though visually similar to the original, carries a much richer set of features, potentially paving the way for more accurate subsequent analyses or processes.
 
-As delineated in Section \ref{sec:probdef}, conventional Convolutional Neural Network (CNN) based techniques facilitate image fusion through the amalgamation of local features. However, a significant limitation inherent to these methods is their lack of consideration for the global context that permeates an image. In an attempt to circumvent this limitation, transformer-based models have been introduced, which capitalise on the self-attention mechanism to effectively model the global context.
+Conventional Convolutional Neural Network (CNN) based techniques facilitate image fusion through the amalgamation of local features. However, a significant limitation inherent to these methods is their lack of consideration for the global context that permeates an image. In an attempt to circumvent this limitation, transformer-based models have been introduced, which capitalise on the self-attention mechanism to effectively model the global context.
 
 The development of an innovative approach that synthesises transformer-based models with CNNs is thus postulated. This approach strives to account for local features at multiple scales, paying careful attention to both local and global contexts. As articulated in Section \ref{sec:model}, the method that is proposed adopts a bi-phase training protocol.
 
-The first stage of this training protocol, as elucidated in Section \ref{subsec:aesel}, necessitates the use of an auto-encoder to extract deep, multi-scale features. In the subsequent stage, these multi-scale features are blended via a fusion strategy that innovatively combines CNNs with Transformers. Comprising a CNN and a transformer branch, the combined fusion blocks capably capture both local and global context features.
+The first stage of this training protocol necessitates the use of an auto-encoder to extract deep, multi-scale features. In the subsequent stage, these multi-scale features are blended via a fusion strategy that innovatively combines CNNs with Transformers. Comprising a CNN and a transformer branch, the combined fusion blocks capably capture both local and global context features.
 
 Further experimentation with this method was undertaken on a multitude of benchmark datasets, as illustrated in Section \ref{chp:results}. Comparative metrics, as specified in Section \ref{subsec:metrics}, revealed that the method proposed outperformed many existing fusion algorithms. The results demonstrated that the combined CNN-Transformer fusion strategy was effective in capturing a broader context, leading to superior performance in various comparative metrics. 
 
@@ -230,43 +176,13 @@ Here, $r^q$, $r^k$, and $r^v$ $\in \mathbb{R}^{H \times H}$ represent the positi
 
 Here, $r^q$, $r^k$, and $r^v$ $\in \mathbb{R}^{W \times W}$ denote the positional embeddings for the width axis.
 
-The axial attention mechanism applies Eq \ref{eq:axialH} for the height axis and Eq \ref{eq:axialW} for the width axis, resulting in an efficient self-attention model. This process can be visually examined in Figure \ref{fig:ch3:fusiondetailed}. 
+The axial attention mechanism, employing specific equations for height and width axes, as depicted in Eq \ref{eq:axialH} and Eq \ref{eq:axialW}, respectively, contributes to the efficacy of a self-attention model, visually illustrated in Figure \ref{fig:ch3:fusiondetailed}. This mechanism proves versatile in learning meaningful representations, demonstrating applicability across diverse fields. Constructing resilient axial attention transformer architectures requires a fusion of theoretical insights and practical approaches, a crucial combination for proficiently addressing complex real-world challenges.
 
-While dealing with challenges and formulating suitable solutions, axial attention transformers prove to be versatile tools in learning meaningful representations, facilitating a broad array of applications across various fields. The fusion of theoretical insights and practical approaches is vital for constructing resilient axial attention transformer architectures that can proficiently handle complex real-world issues.
+Addressing potential issues, axial attention transformers, like other transformer-based models, may encounter difficulties with long-range dependencies, quadratic time complexity, lack of interpretability, overfitting, and training stability. Solutions involve introducing position encodings, efficient attention variants, interpretability techniques, regularization, and gradient clipping. Our approach involves adopting an axial attention transformer as the base model in the Image Fusion Transformer \cite{vs2022image}, fine-tuned on the RoadScene \cite{xu2020aaai} dataset, resulting in a pretrained model adept at capturing essential features. In summary, the dual-branch design of the network, incorporating a spatial branch for local features and a transformer branch for global context, provides a comprehensive feature representation, making it a promising tool for various applications.
 
-\begin{list}{}{}
-    \item \textbf{Long-Range Dependencies:}
-    Axial attention transformers, like most transformer-based models, may struggle with long-range dependencies, especially when processing large sequences or images. This difficulty arises from the transformers' full self-attention mechanism, which may not always capture these dependencies effectively. \textbf{Solution}: Introduce position encodings or relative position representations to help the model capture positional relationships between elements. Additionally, axial attention, which factorizes the full attention into separate attention distributions for each dimension, can be used to more effectively capture long-range dependencies.
-    
-    \item \textbf{Quadratic Time Complexity:}
-    Transformers, including axial attention transformers, have a quadratic time complexity due to their full self-attention mechanism. This can lead to high computational cost when dealing with large inputs. \textbf{Solution}: Apply efficient variants of the attention mechanism, such as Longformer's sliding window attention or Linformer's low-rank approximation, to reduce the time complexity.
-    
-    \item \textbf{Lack of Interpretability:}
-    The representations learned by axial attention transformers can be challenging to interpret, similar to other deep learning models. This lack of interpretability makes it difficult to understand what the model has learned and how it makes decisions. \textbf{Solution}: Use explainability techniques, such as feature visualization or attention visualization, to gain insights into the model's learned representations and decision-making process.
-    
-    \item \textbf{Overfitting:}
-    Axial attention transformers can overfit, particularly when the model is overly complex or the training dataset is limited. Overfitting happens when the model becomes too specialized to the training data, losing its ability to generalize well to unseen data. \textbf{Solution}: Incorporate regularization techniques, such as weight decay or dropout, to discourage overfitting. Techniques like early stopping can also be useful in preventing the model from overtraining.
-    
-    \item \textbf{Training Stability:}
-    Transformers, including axial attention transformers, can sometimes be difficult to train due to their high complexity and susceptibility to issues like exploding gradients. \textbf{Solution}: Use gradient clipping techniques to prevent gradients from exploding during backpropagation. Additionally, adaptive optimization algorithms like Adam, which have built-in mechanisms for dealing with sparse gradients and other challenges, can help ensure stable training.
-\end{list}
+In the initial training phase, the focus is on empowering the encoder network to capture multi-scale deep features. Simultaneously, the decoder network is trained to reconstruct the input image by leveraging these multi-scale deep features, extracted by the trained encoder network. The autoencoder network's structure and training scheme are depicted in Figure \ref{fig:ch3:encoder}, illustrating the coordinated learning process.
 
-To tackle the challenges outlined above, our approach commenced with the adoption of an axial attention transformer in Image Fusion Transformer \cite{vs2022image} as the base model. This axial transformer can extract multi-level features from input data and reconstruct the original data by decoding these feature maps into a single unified representation. To adjust the model to our specific problem requirements, we re-trained this base axial transformer using the RoadScene \cite{xu2020aaai} dataset, initializing the network with random weights. This training process resulted in the development of a pretrained axial attention transformer that effectively captures crucial features from the input data.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.99\textwidth]{../metu-msc-thesis/images/ch3/20230815transformer2.drawio.pdf}
-    \caption{Detailed Fusion Strategy}
-    \label{fig:ch3:fusionM}
-\end{figure}
-
-In summary, the dual-branch design of the network offers complementary functionality. The spatial branch focuses on capturing fine-grained local features using a convolutional block and a bottleneck layer. Simultaneously, the transformer branch employs axial attention to distil global context-related features, enabling a comprehensive feature representation from both local and global perspectives.
-
-\subsubsection{Stage 2: Training of The Autoencoder with Fusion Strategy} \label{subsec:fusionloss}
-
-As elaborated in Section \ref{subsec:aesel}, the initial phase of the training protocol is geared towards enabling the encoder network to capture multi-scale deep features. In tandem, the decoder network is trained to reconstruct the input image, utilizing these multi-scale deep features, which the encoder network has been trained to extract. The structure and training scheme for the auto-encoder network can be observed in Figure \ref{fig:ch3:encoder}.
-
-In Section \ref{sec:model}, it was discussed that the second phase of the training regimen involves incorporating the fusion block between the encoder and the decoder, as portrayed in Figure \ref{fig:ch3:fusionhighlevel}. At this point, we must reassess the prior loss function utilized during the autoencoder training stage, as delineated by Eq \ref{eq:aeloss} in Section \ref{subsec:aeloss}. The goal here is to scrutinize its efficacy for this stage of training.
+Moving forward to the second phase, detailed in Section \ref{sec:model}, the training regimen introduces the fusion block between the encoder and decoder, illustrated in Figure \ref{fig:ch3:fusionhighlevel}. This crucial step prompts a reassessment of the initial loss function employed during the autoencoder training stage, specified by Eq \ref{eq:aeloss} in Section \ref{subsec:aeloss}. The objective is to scrutinize the effectiveness of this loss function for the current stage of training, ensuring its alignment with the fusion block integration.
 
 The fusion loss function, $L_{fuse}$, can be formulated as in Eq \ref{eq:fuseloss}:
 
@@ -276,7 +192,7 @@ The fusion loss function, $L_{fuse}$, can be formulated as in Eq \ref{eq:fuselos
 
 This fusion loss function aims to balance the contribution from pixel-level losses, denoted as $L_{feature}$, and structural similarity losses, $L_{structure}$, modulated by a trade-off factor, $\alpha$. This mathematical construct becomes critical in the context of our analysis and potential modification of the loss function used in the preceding training stage, thereby introducing an additional degree of intricacy to the model's optimization procedure.
 
-As referenced in Section \ref{sec:probdef} and Section \ref{subsec:aeloss}, it is clear that the autoencoder loss function is insufficient to meet the needs of the fusion strategy. This is due to the following reasons:
+It is clear that the autoencoder loss function is insufficient to meet the needs of the fusion strategy. This is due to the following reasons:
 
 \begin{itemize}
     \item $L_{fuse} = 0$ in Eq \ref{eq:fuseloss} signifies an optimal fusion condition, excluding the overfitting case. This implies that both $L_{feature}$ in Eq \ref{eq:aelosspixel} and $L_{structure}$ in Eq \ref{eq:ssimloss} must independently be equal to zero.
@@ -305,6 +221,6 @@ The pixel-wise loss $L_{feature}$ can be formulated as:
     L_{feature} = \sum_{m=1}^{M} \omega^m \left\lvert \left\lvert \phi_f^m - \left(\omega_{vi}\phi_{vi}^{m} + \omega_{ir}\phi_{ir}^{m}\right) \right\rvert \right\rvert _{F}^{2}
 \end{equation}
 
-Here, $M$ refers to the number of scales for deep feature extraction, while $f$, $vi$, and $ir$ denote the fused image, the input visual band image, and the input infrared band image respectively. $\omega^m$, $\omega_{vi}$, and $\omega_{ir}$ represent trade-off parameters employed to harmonize the magnitudes of the losses. $\phi_{x}^{m}$ corresponds to the feature maps of $image x$, which could be either the input or output feature maps of the fusion block, as depicted in Figure \ref{fig:ch3:fusiondetailed}.
+Here, $M$ refers to the number of scales for deep feature extraction, while $f$, $vi$, and $ir$ denote the fused image, the input visual band image, and the input infrared band image respectively. $\omega^m$, $\omega_{vi}$, and $\omega_{ir}$ represent trade-off parameters employed to harmonize the magnitudes of the losses. $\phi_{x}^{m}$ corresponds to the feature maps of $image x$, which could be either the input or output feature maps of the fusion block, as depicted in Figure \ref{fig:ch3:stage2all}.
 
 This loss function restricts the fused deep features to preserve significant structures, thereby enriching the fused feature space with more conspicuous features and preserving detailed information.
