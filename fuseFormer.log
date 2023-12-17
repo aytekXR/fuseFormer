@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  16 DEC 2023 17:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  17 DEC 2023 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -263,7 +263,11 @@ Package caption Info: New subtype `subtable' on input line 238.
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count286
 \l__pdf_internal_box=\box55
-) (fuseFormer.aux)
+) (fuseFormer.aux
+
+LaTeX Warning: Label `fig:ch5:met4' multiply defined.
+
+)
 \openout1 = `fuseFormer.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -434,18 +438,402 @@ LaTeX Warning: Reference `fig:ch3:fusionhighlevel' on page 6 undefined on input 
 
 LaTeX Warning: Reference `subsec:aeloss' on page 6 undefined on input line 185.
 
+) (chapters/4res.tex [6]
+<imgs/ch5/vis/20.png, id=76, 770.88pt x 578.16pt>
+File: imgs/ch5/vis/20.png Graphic file (type png)
+<use imgs/ch5/vis/20.png>
+Package pdftex.def Info: imgs/ch5/vis/20.png  used on input line 24.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+<imgs/ch5/vis/12.png, id=77, 622.325pt x 451.6875pt>
+File: imgs/ch5/vis/12.png Graphic file (type png)
+<use imgs/ch5/vis/12.png>
+Package pdftex.def Info: imgs/ch5/vis/12.png  used on input line 25.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+<imgs/ch5/vis/02.png, id=78, 634.37pt x 497.86pt>
+File: imgs/ch5/vis/02.png Graphic file (type png)
+<use imgs/ch5/vis/02.png>
+Package pdftex.def Info: imgs/ch5/vis/02.png  used on input line 26.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/ir/20.png, id=79, 770.88pt x 578.16pt>
+File: imgs/ch5/ir/20.png Graphic file (type png)
+<use imgs/ch5/ir/20.png>
+Package pdftex.def Info: imgs/ch5/ir/20.png  used on input line 33.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+<imgs/ch5/ir/12.png, id=80, 622.325pt x 451.6875pt>
+File: imgs/ch5/ir/12.png Graphic file (type png)
+<use imgs/ch5/ir/12.png>
+Package pdftex.def Info: imgs/ch5/ir/12.png  used on input line 34.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+<imgs/ch5/ir/02.png, id=81, 634.37pt x 497.86pt>
+File: imgs/ch5/ir/02.png Graphic file (type png)
+<use imgs/ch5/ir/02.png>
+Package pdftex.def Info: imgs/ch5/ir/02.png  used on input line 35.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/ours/20.jpg, id=82, 770.88pt x 578.16pt>
+File: imgs/ch5/ours/20.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/20.jpg>
+Package pdftex.def Info: imgs/ch5/ours/20.jpg  used on input line 42.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+<imgs/ch5/ours/12.jpg, id=83, 622.325pt x 451.6875pt>
+File: imgs/ch5/ours/12.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/12.jpg>
+Package pdftex.def Info: imgs/ch5/ours/12.jpg  used on input line 43.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+<imgs/ch5/ours/02.jpg, id=84, 634.37pt x 497.86pt>
+File: imgs/ch5/ours/02.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/02.jpg>
+Package pdftex.def Info: imgs/ch5/ours/02.jpg  used on input line 44.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/sameLoss/20.png, id=85, 260.172pt x 195.129pt>
+File: imgs/ch5/sameLoss/20.png Graphic file (type png)
+<use imgs/ch5/sameLoss/20.png>
+Package pdftex.def Info: imgs/ch5/sameLoss/20.png  used on input line 51.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+<imgs/ch5/sameLoss/12.png, id=86, 260.172pt x 195.129pt>
+File: imgs/ch5/sameLoss/12.png Graphic file (type png)
+<use imgs/ch5/sameLoss/12.png>
+Package pdftex.def Info: imgs/ch5/sameLoss/12.png  used on input line 52.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+<imgs/ch5/sameLoss/02.png, id=87, 260.172pt x 195.129pt>
+File: imgs/ch5/sameLoss/02.png Graphic file (type png)
+<use imgs/ch5/sameLoss/02.png>
+Package pdftex.def Info: imgs/ch5/sameLoss/02.png  used on input line 53.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
 
-Overfull \hbox (65.63094pt too wide) detected at line 214
-[]\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = [][] + [][]
+Overfull \hbox (264.0pt too wide) in paragraph at lines 23--59
+ [][] 
  []
 
-) (fuseFormer.bbl [6]
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 23--59
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 23--59
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 23--59
+ [] 
+ []
+
+File: imgs/ch5/vis/20.png Graphic file (type png)
+<use imgs/ch5/vis/20.png>
+Package pdftex.def Info: imgs/ch5/vis/20.png  used on input line 68.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+File: imgs/ch5/vis/12.png Graphic file (type png)
+<use imgs/ch5/vis/12.png>
+Package pdftex.def Info: imgs/ch5/vis/12.png  used on input line 69.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+File: imgs/ch5/vis/02.png Graphic file (type png)
+<use imgs/ch5/vis/02.png>
+Package pdftex.def Info: imgs/ch5/vis/02.png  used on input line 70.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+File: imgs/ch5/ir/20.png Graphic file (type png)
+<use imgs/ch5/ir/20.png>
+Package pdftex.def Info: imgs/ch5/ir/20.png  used on input line 77.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+File: imgs/ch5/ir/12.png Graphic file (type png)
+<use imgs/ch5/ir/12.png>
+Package pdftex.def Info: imgs/ch5/ir/12.png  used on input line 78.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+File: imgs/ch5/ir/02.png Graphic file (type png)
+<use imgs/ch5/ir/02.png>
+Package pdftex.def Info: imgs/ch5/ir/02.png  used on input line 79.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+File: imgs/ch5/ours/20.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/20.jpg>
+Package pdftex.def Info: imgs/ch5/ours/20.jpg  used on input line 86.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+File: imgs/ch5/ours/12.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/12.jpg>
+Package pdftex.def Info: imgs/ch5/ours/12.jpg  used on input line 87.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+File: imgs/ch5/ours/02.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/02.jpg>
+Package pdftex.def Info: imgs/ch5/ours/02.jpg  used on input line 88.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/swinFusion/20.jpg, id=88, 770.88pt x 578.16pt>
+File: imgs/ch5/swinFusion/20.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/20.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/20.jpg  used on input line 95.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+<imgs/ch5/swinFusion/12.jpg, id=89, 622.325pt x 451.6875pt>
+File: imgs/ch5/swinFusion/12.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/12.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/12.jpg  used on input line 96.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+<imgs/ch5/swinFusion/02.jpg, id=90, 634.37pt x 497.86pt>
+File: imgs/ch5/swinFusion/02.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/02.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/02.jpg  used on input line 97.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 67--103
+ [][] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 67--103
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 67--103
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 67--103
+ [] 
+ []
+
+<imgs/ch5/m3fd/20.jpg, id=91, 770.88pt x 578.16pt>
+File: imgs/ch5/m3fd/20.jpg Graphic file (type jpg)
+<use imgs/ch5/m3fd/20.jpg>
+Package pdftex.def Info: imgs/ch5/m3fd/20.jpg  used on input line 110.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+<imgs/ch5/m3fd/12.jpg, id=92, 622.325pt x 451.6875pt>
+File: imgs/ch5/m3fd/12.jpg Graphic file (type jpg)
+<use imgs/ch5/m3fd/12.jpg>
+Package pdftex.def Info: imgs/ch5/m3fd/12.jpg  used on input line 111.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+<imgs/ch5/m3fd/02.jpg, id=93, 634.37pt x 497.86pt>
+File: imgs/ch5/m3fd/02.jpg Graphic file (type jpg)
+<use imgs/ch5/m3fd/02.jpg>
+Package pdftex.def Info: imgs/ch5/m3fd/02.jpg  used on input line 112.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+File: imgs/ch5/swinFusion/20.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/20.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/20.jpg  used on input line 119.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+File: imgs/ch5/swinFusion/12.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/12.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/12.jpg  used on input line 120.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+File: imgs/ch5/swinFusion/02.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/02.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/02.jpg  used on input line 121.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/rfn/20.png, id=94, 770.88pt x 578.16pt>
+File: imgs/ch5/rfn/20.png Graphic file (type png)
+<use imgs/ch5/rfn/20.png>
+Package pdftex.def Info: imgs/ch5/rfn/20.png  used on input line 128.
+(pdftex.def)             Requested size: 82.56215pt x 67.19716pt.
+<imgs/ch5/rfn/12.png, id=95, 622.325pt x 451.6875pt>
+File: imgs/ch5/rfn/12.png Graphic file (type png)
+<use imgs/ch5/rfn/12.png>
+Package pdftex.def Info: imgs/ch5/rfn/12.png  used on input line 129.
+(pdftex.def)             Requested size: 82.55737pt x 67.19882pt.
+<imgs/ch5/rfn/02.png, id=96, 634.37pt x 497.86pt>
+File: imgs/ch5/rfn/02.png Graphic file (type png)
+<use imgs/ch5/rfn/02.png>
+Package pdftex.def Info: imgs/ch5/rfn/02.png  used on input line 130.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/denseFuse/20.png, id=97, 260.172pt x 195.129pt>
+File: imgs/ch5/denseFuse/20.png Graphic file (type png)
+<use imgs/ch5/denseFuse/20.png>
+Package pdftex.def Info: imgs/ch5/denseFuse/20.png  used on input line 137.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+<imgs/ch5/denseFuse/12.png, id=98, 260.172pt x 195.129pt>
+File: imgs/ch5/denseFuse/12.png Graphic file (type png)
+<use imgs/ch5/denseFuse/12.png>
+Package pdftex.def Info: imgs/ch5/denseFuse/12.png  used on input line 138.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+<imgs/ch5/denseFuse/02.png, id=99, 260.172pt x 195.129pt>
+File: imgs/ch5/denseFuse/02.png Graphic file (type png)
+<use imgs/ch5/denseFuse/02.png>
+Package pdftex.def Info: imgs/ch5/denseFuse/02.png  used on input line 139.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 109--145
+ [][] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 109--145
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 109--145
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 109--145
+ [] 
+ []
+
+
+LaTeX Warning: Reference `fig:ch5:met5' on page 7 undefined on input line 148.
+
+[7 <./imgs/ch5/vis/20.png (PNG copy)> <./imgs/ch5/vis/12.png (PNG copy)> <./imgs/ch5/vis/02.png (PNG copy)> <./imgs/ch5/ir/20.png (PNG copy)> <./imgs/ch5/ir/12.png (PNG copy)> <./imgs/ch5/ir/02.png (PNG copy)> <./imgs/ch5/ours/20.jpg> <./imgs/ch5/ours/12.jpg> <./imgs/ch5/ours/02.jpg> <./imgs/ch5/sameLoss/20.png> <./imgs/ch5/sameLoss/12.png> <./imgs/ch5/sameLoss/02.png>]
+File: imgs/ch5/vis/02.png Graphic file (type png)
+<use imgs/ch5/vis/02.png>
+Package pdftex.def Info: imgs/ch5/vis/02.png  used on input line 174.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/vis/07.png, id=110, 597.23125pt x 329.23pt>
+File: imgs/ch5/vis/07.png Graphic file (type png)
+<use imgs/ch5/vis/07.png>
+Package pdftex.def Info: imgs/ch5/vis/07.png  used on input line 175.
+(pdftex.def)             Requested size: 82.55469pt x 67.2012pt.
+<imgs/ch5/vis/11.png, id=111, 360.34625pt x 247.92625pt>
+File: imgs/ch5/vis/11.png Graphic file (type png)
+<use imgs/ch5/vis/11.png>
+Package pdftex.def Info: imgs/ch5/vis/11.png  used on input line 176.
+(pdftex.def)             Requested size: 82.55898pt x 67.20201pt.
+File: imgs/ch5/ir/02.png Graphic file (type png)
+<use imgs/ch5/ir/02.png>
+Package pdftex.def Info: imgs/ch5/ir/02.png  used on input line 183.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/ir/07.png, id=112, 597.23125pt x 329.23pt>
+File: imgs/ch5/ir/07.png Graphic file (type png)
+<use imgs/ch5/ir/07.png>
+Package pdftex.def Info: imgs/ch5/ir/07.png  used on input line 184.
+(pdftex.def)             Requested size: 82.55469pt x 67.2012pt.
+<imgs/ch5/ir/11.png, id=113, 360.34625pt x 247.92625pt>
+File: imgs/ch5/ir/11.png Graphic file (type png)
+<use imgs/ch5/ir/11.png>
+Package pdftex.def Info: imgs/ch5/ir/11.png  used on input line 185.
+(pdftex.def)             Requested size: 82.55898pt x 67.20201pt.
+File: imgs/ch5/ours/02.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/02.jpg>
+Package pdftex.def Info: imgs/ch5/ours/02.jpg  used on input line 192.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/ours/07.jpg, id=114, 598.235pt x 329.23pt>
+File: imgs/ch5/ours/07.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/07.jpg>
+Package pdftex.def Info: imgs/ch5/ours/07.jpg  used on input line 193.
+(pdftex.def)             Requested size: 82.55652pt x 67.2012pt.
+<imgs/ch5/ours/11.jpg, id=115, 361.35pt x 248.93pt>
+File: imgs/ch5/ours/11.jpg Graphic file (type jpg)
+<use imgs/ch5/ours/11.jpg>
+Package pdftex.def Info: imgs/ch5/ours/11.jpg  used on input line 194.
+(pdftex.def)             Requested size: 82.56288pt x 67.20439pt.
+File: imgs/ch5/swinFusion/02.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/02.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/02.jpg  used on input line 201.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/swinFusion/07.jpg, id=116, 598.235pt x 329.23pt>
+File: imgs/ch5/swinFusion/07.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/07.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/07.jpg  used on input line 202.
+(pdftex.def)             Requested size: 82.55652pt x 67.2012pt.
+<imgs/ch5/swinFusion/11.jpg, id=117, 361.35pt x 248.93pt>
+File: imgs/ch5/swinFusion/11.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/11.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/11.jpg  used on input line 203.
+(pdftex.def)             Requested size: 82.56288pt x 67.20439pt.
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 173--209
+ [][] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 173--209
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 173--209
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 173--209
+ [] 
+ []
+
+File: imgs/ch5/m3fd/02.jpg Graphic file (type jpg)
+<use imgs/ch5/m3fd/02.jpg>
+Package pdftex.def Info: imgs/ch5/m3fd/02.jpg  used on input line 216.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/m3fd/07.jpg, id=118, 598.235pt x 329.23pt>
+File: imgs/ch5/m3fd/07.jpg Graphic file (type jpg)
+<use imgs/ch5/m3fd/07.jpg>
+Package pdftex.def Info: imgs/ch5/m3fd/07.jpg  used on input line 217.
+(pdftex.def)             Requested size: 82.55652pt x 67.2012pt.
+<imgs/ch5/m3fd/11.jpg, id=119, 361.35pt x 248.93pt>
+File: imgs/ch5/m3fd/11.jpg Graphic file (type jpg)
+<use imgs/ch5/m3fd/11.jpg>
+Package pdftex.def Info: imgs/ch5/m3fd/11.jpg  used on input line 218.
+(pdftex.def)             Requested size: 82.56288pt x 67.20439pt.
+File: imgs/ch5/swinFusion/02.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/02.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/02.jpg  used on input line 225.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+File: imgs/ch5/swinFusion/07.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/07.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/07.jpg  used on input line 226.
+(pdftex.def)             Requested size: 82.55652pt x 67.2012pt.
+File: imgs/ch5/swinFusion/11.jpg Graphic file (type jpg)
+<use imgs/ch5/swinFusion/11.jpg>
+Package pdftex.def Info: imgs/ch5/swinFusion/11.jpg  used on input line 227.
+(pdftex.def)             Requested size: 82.56288pt x 67.20439pt.
+File: imgs/ch5/rfn/02.png Graphic file (type png)
+<use imgs/ch5/rfn/02.png>
+Package pdftex.def Info: imgs/ch5/rfn/02.png  used on input line 234.
+(pdftex.def)             Requested size: 82.5581pt x 67.20059pt.
+<imgs/ch5/rfn/07.png, id=120, 597.23125pt x 329.23pt>
+File: imgs/ch5/rfn/07.png Graphic file (type png)
+<use imgs/ch5/rfn/07.png>
+Package pdftex.def Info: imgs/ch5/rfn/07.png  used on input line 235.
+(pdftex.def)             Requested size: 82.55469pt x 67.2012pt.
+<imgs/ch5/rfn/11.png, id=121, 360.34625pt x 247.92625pt>
+File: imgs/ch5/rfn/11.png Graphic file (type png)
+<use imgs/ch5/rfn/11.png>
+Package pdftex.def Info: imgs/ch5/rfn/11.png  used on input line 236.
+(pdftex.def)             Requested size: 82.55898pt x 67.20201pt.
+File: imgs/ch5/denseFuse/02.png Graphic file (type png)
+<use imgs/ch5/denseFuse/02.png>
+Package pdftex.def Info: imgs/ch5/denseFuse/02.png  used on input line 243.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+<imgs/ch5/denseFuse/07.png, id=122, 260.172pt x 195.129pt>
+File: imgs/ch5/denseFuse/07.png Graphic file (type png)
+<use imgs/ch5/denseFuse/07.png>
+Package pdftex.def Info: imgs/ch5/denseFuse/07.png  used on input line 244.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+<imgs/ch5/denseFuse/11.png, id=123, 260.172pt x 195.129pt>
+File: imgs/ch5/denseFuse/11.png Graphic file (type png)
+<use imgs/ch5/denseFuse/11.png>
+Package pdftex.def Info: imgs/ch5/denseFuse/11.png  used on input line 245.
+(pdftex.def)             Requested size: 82.562pt x 67.20345pt.
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 215--251
+ [][] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 215--251
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 215--251
+ [] 
+ []
+
+
+Overfull \hbox (264.0pt too wide) in paragraph at lines 215--251
+ [] 
+ []
+
+
+LaTeX Warning: Reference `tab:ch5:met4' on page 8 undefined on input line 254.
+
+
+Underfull \vbox (badness 2126) has occurred while \output is active []
+
+) (fuseFormer.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./imgs/ch5/swinFusion/20.jpg> <./imgs/ch5/swinFusion/12.jpg> <./imgs/ch5/swinFusion/02.jpg> <./imgs/ch5/m3fd/20.jpg> <./imgs/ch5/m3fd/12.jpg> <./imgs/ch5/m3fd/02.jpg> <./imgs/ch5/rfn/20.png (PNG copy)> <./imgs/ch5/rfn/12.png (PNG copy)> <./imgs/ch5/rfn/02.png (PNG copy)> <./imgs/ch5/denseFuse/20.png> <./imgs/ch5/denseFuse/12.png> <./imgs/ch5/denseFuse/02.png>] [9 <./imgs/ch5/vis/07.png (PNG copy)> <./imgs/ch5/vis/11.png (PNG copy)> <./imgs/ch5/ir/07.png (PNG copy)> <./imgs/ch5/ir/11.png (PNG copy)> <./imgs/ch5/ours/07.jpg> <./imgs/ch5/ours/11.jpg> <./imgs/ch5/swinFusion/07.jpg> <./imgs/ch5/swinFusion/11.jpg> <./imgs/ch5/m3fd/07.jpg> <./imgs/ch5/m3fd/11.jpg> <./imgs/ch5/rfn/07.png (PNG copy)> <./imgs/ch5/rfn/11.png (PNG copy)> <./imgs/ch5/denseFuse/07.png> <./imgs/ch5/denseFuse/11.png>]
 Underfull \hbox (badness 3668) in paragraph at lines 100--102
 []\OT1/ptm/m/n/8 Y. Fu, T. Xu, X. Wu, and J. Kit-tler, ``Ppt fu-sion: Pyra-mid
  []
-
-
-Underfull \vbox (badness 1077) has occurred while \output is active []
 
 
 Underfull \hbox (badness 6876) in paragraph at lines 126--128
@@ -464,7 +852,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (fuseFormer.aux)
+[10
+
+] (fuseFormer.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -473,19 +863,22 @@ L3 programming layer <2023-08-29>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 5781 strings out of 475248
- 96612 string characters out of 5757812
- 1938785 words of memory out of 5000000
- 27246 multiletter control sequences out of 15000+600000
- 599944 words of font info for 114 fonts, out of 8000000 for 9000
+ 6135 strings out of 475248
+ 105668 string characters out of 5757812
+ 1945785 words of memory out of 5000000
+ 27589 multiletter control sequences out of 15000+600000
+ 604784 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,17n,77p,1864b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on fuseFormer.pdf (7 pages, 498242 bytes).
+ 67i,17n,77p,1937b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on fuseFormer.pdf (10 pages, 3353743 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
+ 211 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -131,4 +131,30 @@ H.~Wang, Y.~Zhu, B.~Green, H.~Adam, A.~Yuille, and L.-C. Chen, ``Axial-deeplab:
   Stand-alone axial-attention for panoptic segmentation,'' in {\em European
   conference on computer vision}, pp.~108--126, Springer, 2020.
 
+\bibitem{roberts2008assessment}
+J.~W. Roberts, J.~A. Van~Aardt, and F.~B. Ahmed, ``Assessment of image fusion
+  procedures using entropy, image quality, and multispectral classification,''
+  {\em Journal of Applied Remote Sensing}, vol.~2, no.~1, p.~023522, 2008.
+
+\bibitem{aslantas2015new}
+V.~Aslantas and E.~Bendes, ``A new image quality metric for image fusion: The
+  sum of the correlations of differences,'' {\em Aeu-international Journal of
+  electronics and communications}, vol.~69, no.~12, pp.~1890--1896, 2015.
+
+\bibitem{qu2002information}
+G.~Qu, D.~Zhang, and P.~Yan, ``Information measure for performance of image
+  fusion,'' {\em Electronics letters}, vol.~38, no.~7, p.~1, 2002.
+
+\bibitem{liu2022target}
+J.~Liu, X.~Fan, Z.~Huang, G.~Wu, R.~Liu, W.~Zhong, and Z.~Luo, ``Target-aware
+  dual adversarial learning and a multi-scenario multi-modality benchmark to
+  fuse infrared and visible for object detection,'' in {\em Proceedings of the
+  IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pp.~5802--5811, 2022.
+
+\bibitem{ma2022swinfusion}
+J.~Ma, L.~Tang, F.~Fan, J.~Huang, X.~Mei, and Y.~Ma, ``Swinfusion: Cross-domain
+  long-range learning for general image fusion via swin transformer,'' {\em
+  IEEE/CAA Journal of Automatica Sinica}, vol.~9, no.~7, pp.~1200--1217, 2022.
+
 \end{thebibliography}
