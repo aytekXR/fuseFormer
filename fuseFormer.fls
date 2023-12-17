@@ -584,11 +584,14 @@ INPUT .\imgs\ch5\denseFuse\11.png
 INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
 INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT .\chapters\5conc.tex
+INPUT .\chapters\5conc.tex
+INPUT chapters\5conc.tex
+INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri7t.vf
+INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT .\fuseFormer.bbl
 INPUT .\fuseFormer.bbl
 INPUT fuseFormer.bbl
-INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri7t.vf
-INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT fuseFormer.aux
 INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\aayte\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
