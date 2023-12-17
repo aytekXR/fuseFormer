@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex fuseFormer"] 1702817888 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1702817891 0
+["bibtex fuseFormer"] 1702821601 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1702821604 0
   "./thesis.bib" 1701193931 34395 d7b451bd7b3e81adcfb49e445b26e203 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "fuseFormer.aux" 1702817890 8358 71c8103f389489cc476646ce9db53164 "pdflatex"
+  "fuseFormer.aux" 1702821603 9296 00f917437c93a26272bdb531955f35e0 "pdflatex"
   (generated)
   "fuseFormer.bbl"
   "fuseFormer.blg"
   (rewritten before read)
-["pdflatex"] 1702817888 "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1702817891 0
+["pdflatex"] 1702821601 "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1702821604 0
   "C:/Users/aayte/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701194588 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/aayte/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1701194577 24141909 dacda35e7e4007a1040b938a3aa58b02 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -49,9 +49,12 @@
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1247596667 36094 798f80770b3b148ceedd006d487db67c ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
+  "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1247596666 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
@@ -95,14 +98,14 @@
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "IEEEtran.cls" 1701193931 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" 1702817863 2515 ded9ac198c8a02a2103d4ba806d6ca0d ""
+  "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" 1702818483 2515 ded9ac198c8a02a2103d4ba806d6ca0d ""
   "chapters/1intro.tex" 1702329943 3970 a0b18a86d7b3add93e72ab5339a0f5f5 ""
   "chapters/2relatedw.tex" 1702329644 3385 c19ee8ee8813846d0ae2e137ce37f691 ""
   "chapters/3method.tex" 1702817885 25019 fd92822678fe51de2d337fa25bbb460f ""
-  "chapters/4res.tex" 1702817401 19682 406a6ec53d32cc2d5e7027769eed6bea ""
-  "fuseFormer.aux" 1702817890 8358 71c8103f389489cc476646ce9db53164 "pdflatex"
-  "fuseFormer.bbl" 1702817888 7632 893357e77def822a02591d7eefa1b8d5 "bibtex fuseFormer"
-  "fuseFormer.tex" 1702817863 2515 ded9ac198c8a02a2103d4ba806d6ca0d ""
+  "chapters/4res.tex" 1702821600 23571 50f17e75809ca37dee372dded2547bb7 ""
+  "fuseFormer.aux" 1702821603 9296 00f917437c93a26272bdb531955f35e0 "pdflatex"
+  "fuseFormer.bbl" 1702821601 7632 893357e77def822a02591d7eefa1b8d5 "bibtex fuseFormer"
+  "fuseFormer.tex" 1702818483 2515 ded9ac198c8a02a2103d4ba806d6ca0d ""
   "imgs/ch5/denseFuse/02.png" 1701193980 77771 bc825af92160f5aa380eeb6e541a7f4b ""
   "imgs/ch5/denseFuse/07.png" 1701193980 64402 3dfd959e7154cce932f02cafa634caf4 ""
   "imgs/ch5/denseFuse/11.png" 1701193980 94661 fe7c7953862a109777b691805c30794d ""

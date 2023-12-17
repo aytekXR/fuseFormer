@@ -253,3 +253,65 @@ In this part, our research explores the application of transformer-based models 
 
 From Figure \ref{fig:ch5:met4}, the first column showcases an instance of night vision imagery. This particular example serves as a suitable representation for illustrating long-range dependencies and the global context inherent in such images. The second and third columns, on the other hand, predominantly depict scenarios captured under low light conditions. While at a qualitative glance, the distinctions between the images might appear subtle, a closer examination reveals nuanced differences. Turning our attention to Table \ref{tab:ch5:met4}, a comprehensive evaluation indicates that our proposed method consistently delivers superior results. In comparison to state-of-the-art (SoTA) techniques, our method exhibits marked improvements across nearly every evaluated performance metric.
 
+Challenges and shortcomings inherent to Transformer-based image fusion methodologies can be alleviated through precise model tuning and architectural modifications, leading to a marked improvement in performance. To corroborate this hypothesis, a meticulous model optimization procedure was embarked upon, emphasizing the following aspects:
+
+\begin{table}[htbp]
+    \centering
+    \captionsetup{justification=raggedright,singlelinecheck=false}
+        \caption{Model Tuning Results}
+    \label{tab:ch5:hypo8results}
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        \textbf{Criteria} & \textbf{Initial V} & \textbf{Optimized V} & \textbf{Improvement (\%)} \\\hline
+        Learning Rate & \(1 \times 10^{-4}\) & \(1 \times 10^{-6}\) & 7.64\% \\\hline
+        Batch Size & 2 & 4 & 3.8\% \\\hline
+        Transformer Layers & 8 & 12 & 18.15\% \\\hline
+        Attention Mech & Self & Axial & \textit{N/A}\% \\\hline
+    \end{tabular}
+\end{table}
+
+During an exhaustive hyperparameter tuning phase, the ideal parameter configuration for our transformer model was identified. Leveraging techniques such as grid search, random search, and Bayesian optimization, we refined key parameters: the learning rate, batch size, and the number of transformer layers.
+
+
+\begin{table}[h!]
+    \centering
+    \captionsetup{justification=raggedright,singlelinecheck=false}
+    \caption{Model Tuning Results: Transformer Layers}
+    % \label{tab:ch5:hypo8results}
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        \textbf{Experiment} & \textbf{Entropy\cite{roberts2008assessment}$\uparrow$ } & \textbf{SCD\cite{aslantas2015new}$\downarrow$} & \textbf{MI\cite{qu2002information}$\uparrow$} & \textbf{SSIM\cite{ma2015perceptual}$\uparrow$} \\ \hline
+        $T_{12}$ & 4.533 & 6.152 & 1.346 & 0.846 \\ \hline
+        $T_{10}$ & 4.535 & 6.335 & 1.232 & 0.824 \\ \hline
+        $T_{8}$ & 4.587 & 6.657 & 0.874 & 0.719 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \captionsetup{justification=raggedright,singlelinecheck=false}
+    \caption{Model Tuning Results: Batch Size}
+    % \label{tab:ch5:hypo8results}
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        \textbf{Experiment} & \textbf{Entropy\cite{roberts2008assessment}$\uparrow$ } & \textbf{SCD\cite{aslantas2015new}$\downarrow$} & \textbf{MI\cite{qu2002information}$\uparrow$} & \textbf{SSIM\cite{ma2015perceptual}$\uparrow$} \\ \hline 
+        $B_{4}$ & 4.542 & 6.478 & 1.130 & 0.746 \\ \hline 
+        $B_{2}$ & 4.587 & 6.657 & 0.874 & 0.719 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \captionsetup{justification=raggedright,singlelinecheck=false}
+    \caption{Model Tuning Results: Learning Rate}
+    % \label{tab:ch5:hypo8results}
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        \textbf{Experiment} & \textbf{Entropy\cite{roberts2008assessment}$\uparrow$ } & \textbf{SCD\cite{aslantas2015new}$\downarrow$} & \textbf{MI\cite{qu2002information}$\uparrow$} & \textbf{SSIM\cite{ma2015perceptual}$\uparrow$} \\ \hline 
+        $LR_{1e-6}$            & 4.553                & 6.551       & 1.032           & 0.774 \\ \hline 
+        $LR_{1e-5}$            & 4.570                & 6.603       & 0.948           & 0.747 \\ \hline 
+        $LR_{1e-4}$            & 4.587                & 6.657       & 0.874           & 0.719 \\ \hline
+    \end{tabular}
+\end{table}
+
+Furthermore, architectural modifications, as elaborated, were introduced to counteract the potential pitfalls linked with transformers. This involved refining the attention mechanism structures and experimenting with alternative transformer types, notably the Axial-Attention Transformers. By systematically scrutinizing model tuning and architectural refinements, this study underscored the potency of these approaches in mitigating challenges associated with transformer-centric image fusion methods.
