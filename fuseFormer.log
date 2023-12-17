@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  17 DEC 2023 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  17 DEC 2023 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -861,20 +861,17 @@ Underfull \hbox (badness 1931) in paragraph at lines 317--55
 []\OT1/ptm/m/n/10 Furthermore, ar-chi-tec-tural mod-i-fi-ca-tions, as elab-o-rated,
  []
 
-(fuseFormer.bbl [9 <./imgs/ch5/vis/07.png (PNG copy)> <./imgs/ch5/vis/11.png (PNG copy)> <./imgs/ch5/ir/07.png (PNG copy)> <./imgs/ch5/ir/11.png (PNG copy)> <./imgs/ch5/ours/07.jpg> <./imgs/ch5/ours/11.jpg> <./imgs/ch5/swinFusion/07.jpg> <./imgs/ch5/swinFusion/11.jpg> <./imgs/ch5/m3fd/07.jpg> <./imgs/ch5/m3fd/11.jpg> <./imgs/ch5/rfn/07.png (PNG copy)> <./imgs/ch5/rfn/11.png (PNG copy)> <./imgs/ch5/denseFuse/07.png> <./imgs/ch5/denseFuse/11.png>]
+(chapters/5conc.tex [9 <./imgs/ch5/vis/07.png (PNG copy)> <./imgs/ch5/vis/11.png (PNG copy)> <./imgs/ch5/ir/07.png (PNG copy)> <./imgs/ch5/ir/11.png (PNG copy)> <./imgs/ch5/ours/07.jpg> <./imgs/ch5/ours/11.jpg> <./imgs/ch5/swinFusion/07.jpg> <./imgs/ch5/swinFusion/11.jpg> <./imgs/ch5/m3fd/07.jpg> <./imgs/ch5/m3fd/11.jpg> <./imgs/ch5/rfn/07.png (PNG copy)> <./imgs/ch5/rfn/11.png (PNG copy)> <./imgs/ch5/denseFuse/07.png> <./imgs/ch5/denseFuse/11.png>]) (fuseFormer.bbl
 Underfull \hbox (badness 3668) in paragraph at lines 100--102
 []\OT1/ptm/m/n/8 Y. Fu, T. Xu, X. Wu, and J. Kit-tler, ``Ppt fu-sion: Pyra-mid
  []
-
-
-Underfull \vbox (badness 1077) has occurred while \output is active []
 
 
 Underfull \hbox (badness 6876) in paragraph at lines 126--128
 \OT1/ptm/m/n/8 ial at-ten-tion in mul-ti-di-men-sional trans-form-ers,'' \OT1/ptm/m/it/8 arXiv preprint
  []
 
-)
+[10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -886,7 +883,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (fuseFormer.aux)
+[11
+
+] (fuseFormer.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -900,17 +899,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6140 strings out of 475248
- 105802 string characters out of 5757812
+ 6147 strings out of 475248
+ 105971 string characters out of 5757812
  1945785 words of memory out of 5000000
- 27594 multiletter control sequences out of 15000+600000
+ 27598 multiletter control sequences out of 15000+600000
  604784 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,17n,77p,1937b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on fuseFormer.pdf (10 pages, 3385535 bytes).
+Output written on fuseFormer.pdf (11 pages, 3387834 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
+ 229 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

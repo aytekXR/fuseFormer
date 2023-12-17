@@ -1,0 +1,5 @@
+Furthermore, architectural modifications, as elaborated in Section \ref{subsec:fusionloss}, were introduced to counteract the potential pitfalls linked with transformers. This involved refining the attention mechanism structures and experimenting with alternative transformer types, notably the Axial-Attention Transformers.
+
+Post the implementation of these strategic changes, the performance of the enhanced transformer model was evaluated in light of the standards set by Hypothesis II-1 and Hypothesis II-2.
+
+By systematically scrutinizing model tuning and architectural refinements, this study underscored the potency of these approaches in mitigating challenges associated with transformer-centric image fusion methods, thereby vindicating Hypothesis II-4.
