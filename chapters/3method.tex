@@ -6,7 +6,7 @@ In terms of analogy, the feature extractor corresponds to the encoder in autoenc
 
 Our approach involves a two-stage training process. In the initial stage, we train an autoencoder, originally derived from RFN-Nest \cite{li2021rfn} as illustrated in Figure \ref{fig:ch3:rfnnest}. Subsequently, in the second stage, we train our fusion block, depicted in Figure \ref{fig:fusionblock}, in conjunction with the previously trained autoencoder.
 
-\subsection{Stage 1: Autoencoder Selection} \label{subsec:aesel}
+\section{Stage 1: Autoencoder Selection} \label{subsec:aesel}
 
 \begin{figure}[htbp]
     \centering
@@ -92,7 +92,7 @@ The equation for $SSIM$ ($SSIM(.)$) in Eq. (\ref{eq:ssim}) constrains its output
 
 In short, the autoencoder depicted in Figure \ref{fig:ch3:encoder} is subjected to training using the MS-COCO dataset \cite{lin2014microsoft} and the RoadScene dataset \cite{xu2020aaai}. The training process is guided by the loss function presented in Eq. (\ref{eq:aeloss}). Comprehensive assessments of the autoencoder's performance are presented, encompassing both quantitative and qualitative evaluations. 
 
-\subsection{Stage 2: Fusion Strategy Selection} \label{subsec:fusion}
+\section{Stage 2: Fusion Strategy Selection} \label{subsec:fusion}
 
 \begin{figure}[htbp]
     \centering
@@ -210,7 +210,7 @@ To ensure $L_{fuse} = 0 $ in Eq \ref{eq:fuseloss} corresponds to an optimal fusi
 The SSIM loss $L_{structure}$ is then defined as:
 
 \begin{equation} \label{eq:fusessimloss}
-    L_{structure} = \left[1- SSIM(I_{fused},I_{visual})\right]^2 + \left[1- SSIM(I_{fused},I_{infrared})\right]^2
+    L_{structure} = \left[1- SSIM(I_{f},I_{v})\right]^2 + \left[1- SSIM(I_{f},I_{i})\right]^2
 \end{equation}
 
 Here, $I_x$ represents $image x$ and $SSIM(.)$ is the structural similarity measure \cite{ma2015perceptual} given in Eq \ref{eq:ssim}. The redefined $L_{structure}$ is capable of measuring the similarity of the fused image to both visual and infrared images, and is limited to the interval $(0,8]$.

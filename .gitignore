@@ -5,4 +5,4 @@ fuseFormer.fdb_latexmk
 fuseFormer.fls
 fuseFormer.log
 fuseFormer.synctex.gz
-img/
+img/*
