@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex fuseFormer"] 1702821966 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1702822067 0
+["bibtex fuseFormer"] 1702822093 "fuseFormer.aux" "fuseFormer.bbl" "fuseFormer" 1702822096 0
   "./thesis.bib" 1701193931 34395 d7b451bd7b3e81adcfb49e445b26e203 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "fuseFormer.aux" 1702822066 9397 629671cd78d652bc13189b30581fbe3b "pdflatex"
+  "fuseFormer.aux" 1702822095 9397 629671cd78d652bc13189b30581fbe3b "pdflatex"
   (generated)
   "fuseFormer.bbl"
   "fuseFormer.blg"
   (rewritten before read)
-["pdflatex"] 1702822064 "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1702822067 0
+["pdflatex"] 1702822093 "c:/Users/aayte/Documents/repo/fuseFormer/fuseFormer.tex" "fuseFormer.pdf" "fuseFormer" 1702822096 0
   "C:/Users/aayte/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701194588 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/aayte/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1701194577 24141909 dacda35e7e4007a1040b938a3aa58b02 ""
   "C:/Users/aayte/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -104,8 +104,8 @@
   "chapters/3method.tex" 1702817885 25019 fd92822678fe51de2d337fa25bbb460f ""
   "chapters/4res.tex" 1702821610 23571 50f17e75809ca37dee372dded2547bb7 ""
   "chapters/5conc.tex" 1702821981 2075 768db8ad379f48cff1596f8dfb90cc7d ""
-  "fuseFormer.aux" 1702822066 9397 629671cd78d652bc13189b30581fbe3b "pdflatex"
-  "fuseFormer.bbl" 1702821967 7632 893357e77def822a02591d7eefa1b8d5 "bibtex fuseFormer"
+  "fuseFormer.aux" 1702822095 9397 629671cd78d652bc13189b30581fbe3b "pdflatex"
+  "fuseFormer.bbl" 1702822093 7632 893357e77def822a02591d7eefa1b8d5 "bibtex fuseFormer"
   "fuseFormer.tex" 1702822063 2563 fdd565873ce95ef50e07e7021bd813d4 ""
   "imgs/ch5/denseFuse/02.png" 1701193980 77771 bc825af92160f5aa380eeb6e541a7f4b ""
   "imgs/ch5/denseFuse/07.png" 1701193980 64402 3dfd959e7154cce932f02cafa634caf4 ""
